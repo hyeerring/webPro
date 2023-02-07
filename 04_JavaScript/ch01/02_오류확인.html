@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // (java) int i = 20;
+        al_pha = 20;
+        // = var al_pha;
+        // 변수선언 시 var를 사용하면 전역변수
+        // let al_pha : 지역변수
+        
+        // alert 경고 메세지 창 --> 윈도우 개발자모드의 Console에서 오류 확인 가능
+        alert(1); // submit이 이루어진 이후라 F12를 눌러도 에러를 보지 못할 경우에 사용
+        console.log(1);
+
+        // 고의적인 error
+        alert("al_pha값은 "+ alpha);
+        console.log(2);
+        
+        // '', "" 구분없이 사용 가능
+        al_pha = "hello";
+        console.log(3);
+        
+        alert("변경된 al_pha값은 "+ al_pha);
+        console.log(4);
+        
+    </script>
+</head>
+<body>
+    <script>
+        document.write('위의 스크립트에서 선언된 변수 al_pha값은' + al_pha);
+    </script>
+</body>
+</html>
