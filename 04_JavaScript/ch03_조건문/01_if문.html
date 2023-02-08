@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // const date = new Date();
+        // const hour = date.getHours(); // 0~23
+        const hour = new Date().getHours();
+        if (hour < 12) {
+            document.write('아침입니다.<br>');
+            document.write('<img src="img/am.jpg" alt="아침사진">');
+            // document.body.innerHTML += 
+        } else {
+            document.write('오후입니다.<br>');
+            document.write('<img src="img/pm.jpg" alt="오후사진">');
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

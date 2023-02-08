@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function chk() {
+            if (!frm.su1.value) {
+                alert('첫번째 수를 입력하세요.');
+                frm.su1.focus();
+                return false;
+            } else if (!frm.su2.value) {
+                alert('두번째 수를 입력하세요.');
+                frm.su2.focus();
+                return false;
+            }
+
+            // 몇번째 수가 얼마나 더 큰지 경고창과 화면에 출력
+            let num1 = Number(frm.su1.value);
+            let num2 = Number(frm.su2.value);
+            let msg;
+            if (num1 > num2) {
+                msg = '<p>첫번째 수가 ' + (num1 - num2) + '더 큽니다.</p>';
+            } else if (num2 > num1) {
+                msg = '<p>두번째 수가 ' + (num2 - num1) + '더 큽니다.</p>';
+            } else {
+                msg = '<p>두 수가 같습니다.</p>';
+            }
+            document.body.innerHTML += msg;
+            frm.su1.value = num1;
+            frm.su2.value = num2;
+            let alertMsg = msg.substring(3);
+            alertMsg = alertMsg.substring(0, alertMsg.indexOf('</P>'));
+            alert(alertMsg);
+            return false;
+        }
+    </script>
+    <style>
+        table {
+            outline: 1px solid gray;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        table td input {
+            margin: 4px;
+        }
+
+        table td input {
+            border: 1px solid gray;
+            padding: 4px;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" name="frm" onsubmit="return chk()">
+        <table>
+            <tr>
+                <td>첫번째수</td>
+                <td><input type="number" name="su1"></td>
+            </tr>
+            <tr>
+                <td>두번째수</td>
+                <td><input type="number" name="su2"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p>
+                        <input type="submit" value="결과">
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+
+</body>
+
+</html>
