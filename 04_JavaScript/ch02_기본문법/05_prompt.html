@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let scoreStr = prompt('점수를 입력하세요: ');
+        // document.write('입력한 값: ' + scoreStr + '-타입: ' + typeof (scoreStr));
+        if (scoreStr == null) {
+            alert('점수를 입력하세요: ');
+        } else {
+            // document.write('입력한 값: ' + scoreStr + '-타입: ' + typeof (scoreStr));
+            // string을 number으로 형변환 함수
+            // 형변환이 불가할 경우 NaN
+            let score = Number(scoreStr);
+            document.write('입력한 수: ' + score + '- 타입: ' + typeof (score) + '<br>');
+            if (isNaN(score) || scoreStr == '') {
+                alert('점수를 입력하세요.');
+            } else {
+                result = score >= 70 ? '참 잘했어요' : '조금 더 노력하세요.';
+            }
+        }
+        document.write(result);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

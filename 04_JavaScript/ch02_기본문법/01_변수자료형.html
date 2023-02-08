@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 자료형: string, number, boolean, function, object(array), undefined
+        // 'use strict';
+        var variable;
+        document.write('1. variable 타입: ' + typeof (variable) + ' - 값: ' + variable + '<br>');
+        variable = '김길동';
+        document.write('2. variable 타입: ' + typeof (variable) + ' - 값: ' + variable + '<br>');
+        variable = 10;
+        document.write('3. variable 타입: ' + typeof (variable) + ' - 값: ' + variable + '<br>');
+        variable = 10.5;
+        document.write('4. variable 타입: ' + typeof (variable) + ' - 값: ' + variable + '<br>');
+        variable = false;
+        document.write('5. variable 타입: ' + typeof (variable) + ' - 값: ' + variable + '<br>');
+        variable = function () {
+            alert('함수');
+        };
+        document.write('6. variable 타입: ' + typeof (variable) + ' - 값: ' + variable + '<br>');
+        // variable(); // 함수를 호출
+
+        /*
+        (Java)
+        class Person{
+            private String name;
+            private int age;
+            매개변수 있는 생성자
+        }
+        
+        Person variable = new Person("김길동", 20);
+        */
+
+        variable = { 'name': '김길동', 'age': 20 };
+        document.write('7. variable 타입: ' + typeof (variable) + ' - 값: ' + variable.name + '<br>');
+        variable = [10, '홍길동', function () { }, true, { name: '홍', age: 30 }, [1, 2, 3]]; // 배열
+        document.write("7. variable 타입:" + typeof (variable) + ' - 값:' + variable + '<br>');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
