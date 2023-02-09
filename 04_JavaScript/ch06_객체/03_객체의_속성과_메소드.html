@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <script>
+      let name = "이순신";
+      let method = function (i) {
+        alert(i);
+      };
+      let person = {
+        name: "홍길동", // 속성변수
+        age: 20,
+        eat: function (food) {
+          // 메소드
+          var msg =
+            this.age + "살 " + this.name + "은 " + food + "를 좋아한다.";
+          alert(msg);
+        },
+      };
+      document.write(person.name + "<br>");
+      document.write(person["name"] + "<br>");
+      person.eat("햄버거");
+
+      // document.write(person + '<br>');
+    </script>
+  </head>
+
+  <body></body>
+</html>

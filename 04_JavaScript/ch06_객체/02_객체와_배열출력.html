@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <script>
+      // 출력: forEach() 함수 이용, 일반 for문, for-in문
+      var arr = [1, 2, 300];
+      // var arr = {0:1, 1:2, 2:300};
+      for (var idx in arr) {
+        document.write(idx + ": " + arr[idx] + "<br>");
+      }
+
+      // 출력: for-in문
+      var obj = { name: "홍길동", age: 20 };
+      obj.address = "서울시";
+      for (var key in obj) {
+        document.write(key + ": " + obj[key] + "<br>");
+      }
+    </script>
+  </head>
+
+  <body></body>
+</html>
