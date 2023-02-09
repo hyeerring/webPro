@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var arr = [111, 222, '김길동'];
+
+        // 1. 일반 for문
+        document.write('<h3>1.일반 for문</h3>');
+        for (var idx = 0; idx < arr.length; idx++) {
+            document.write(idx + '번째 값: ' + arr[idx] + '<br>');
+        }
+
+        // 2. for-in문
+        document.write('<h3>2.for-in문</h3>');
+        for (var idx in arr) {
+            document.write((idx + '번째 값: ' + arr[idx] + '<br>'));
+        }
+        // 3.forEach함수-1
+        document.write('<h3>3.index와 함께 forEach함수-1</h3>');
+        // 배열명: arr
+        // 데이터는 111, 222, '김길동'
+        // 인덱스는 0, 1, 2
+        arr.forEach(function (data, idx) {
+            document.write(idx + '번째 값: ' + data + '<br>');
+            // document.write(idx + '번째 값: ' + arr[idx] + '<br>');
+        });
+
+        // 4.forEach함수-2
+        // 배열 반복시 index가 필요 없을 때
+        document.write('<h3>4.index없이 forEach함수-2</h3>');
+        arr.forEach(function (data) {
+            // document.write(idx + '번째 값: ' + data + '<br>');
+            document.write(data + '<br>');
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // prompt를 통해 값을 누적하는 프로그램 제작
+        // 입력횟수와 제대로 입력한 횟수, 잘못 입력한 횟수 누적
+
+        let cnt = 0;   // 누적한 횟수
+        let right = 0; // 점수를 제대로 입력한 횟수
+        let wrong = 0; // 점수를 잘못 입력한 횟수
+        let sum = 0;   // 누적된 점수
+
+        while (confirm('누적을 원하시면 확인을 눌러주세요.')) {
+            ++cnt;
+            scoreStr = prompt('누적할 점수를 입력하세요.');
+            score = Number(scoreStr);
+            if (scoreStr != null && scoreStr != '' && !isNaN(score) && score >= 0 && score <= 100) {
+                sum += score;
+                right++;
+            } else {
+                prompt('=== 0 ~ 100사이의 정수를 입력해 주세요. ===');
+                wrong++;
+            }
+        }
+        document.write(cnt + "번 입력<br>");
+        document.write('누적점수 : ' + sum + '<br>');
+        document.write('점수를 제대로 입력한 횟수:' + right + '<br>');
+        document.write('점수를 잘못  입력한 횟수:' + wrong + '<br>');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

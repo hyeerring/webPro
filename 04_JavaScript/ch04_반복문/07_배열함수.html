@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // forEach(): 배열 반복
+        // push(): 배열 추가 
+        // slice(): 배열 추출
+        // splice(): 원본 배열 수정
+
+        let arr = ['가', '라', '나', '라', '다', '라'];
+        // slice는 원본 배열은 바꾸지 않고 새로운 배열을 만든다.
+        let copyArr = arr.slice(2, 5); // 2번째부터 5번째 앞까지
+        document.write(copyArr + '<br>'); // 나,라,다
+
+        copyArr = arr.slice(2, -1); // 2번째부터 뒤에서 1번째 앞까지
+        document.write(copyArr + '<br>'); // 나,라,다
+
+        // splice는 원본 배열을 수정
+        // arr.splice(3, 2); // 3번째부터 2개를 제거
+        // document.write(arr + '<br>'); // 가,라,나,라
+        // arr.splice(0, 1, '하'); // 0번째부터 1개를 '하'로 변경
+        // document.write(arr + '<br>'); // 하,라,나,라
+
+        // 배열에서 '라' 제거
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == '라') {
+                arr.splice(i, 1);
+            }
+        }
+        document.write(arr + '<br>'); // 가,나,다
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
