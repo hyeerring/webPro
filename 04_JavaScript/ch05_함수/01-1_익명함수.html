@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // 익명함수: 변수에 할당한 함수
+
+        // 함수표현식
+        var functionVar = function (i, j) {
+            alert(i + 'test' + j);
+        };
+        // 화살표함수
+        functionVar = (i, j) => {
+            alert(i + 'test' + j);
+        };
+        document.write(functionVar + '<br>');
+        // 익명함수 호출 시에는 함수형 변수에 할당 후 변수를 통해 호출
+        // 익명함수 호출은 변수의 이름에 ()를 붙여 호출
+        functionVar(10, 20);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

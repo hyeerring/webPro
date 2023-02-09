@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var arr1 = array();
+        var arr2 = array(2); // arguments = [2]
+        var arr3 = array(273, 2, 'Hello'); // arguments = [273, 2, 'Hello']
+        // 가변인자 함수 array()를 생성
+        // 매개 변수가 0개: length가 0인 배열생성
+        // 매개 변수가 1개:  매개변수만큼의 크기를 가지는 배열생성
+        // 매개 변수가 2개 이상: 매개변수로 배열을 만든다. 
+
+        // var array = function(){
+
+        // };
+
+        function array() { // arguments 배열에 실행 시의 매개변수가 들어옴
+            var result = [];
+            if (arguments.length == 1) {
+                for (var cnt = 1; cnt <= arguments[0]; cnt++) {
+                    result.push(null);
+                } // for
+            } else if (arguments.length >= 2) {
+                // for (var idx = 0; idx < arguments.length; idx++) {
+                //     result.push(arguments[idx]);
+                // }
+                for (var idx in arguments) {
+                    result.push(arguments[idx]);
+                }
+            }
+            return result;
+        }
+
+        document.write('arr1의 방의 갯수 : ' + arr1.length + '<br>');
+        document.write('arr2의 방의 갯수 : ' + arr2.length + '<br>');
+        document.write('arr3의 방의 갯수 : ' + arr3.length + '<br>');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

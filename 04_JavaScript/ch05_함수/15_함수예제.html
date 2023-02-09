@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* body {
+            background-size: 100%;
+        } */
+    </style>
+    <script>
+        // document.write('테스트');
+
+        var s = 0;
+        var img = ['url(img/img01.png)', 'url(img/img02.png)', 'url(img/img03.png)'];
+        var fontcolor = ['yellow', 'red', 'white'];
+        // var id = setInterval(function () {
+        //     document.write(new Date() + '<br>');
+        //     document.body.style.backgroundImage = 'url(img/img0' + (s % 3 + 1) + '.png)';
+        //     document.body.style.backgroundSize = '100 %';
+        //     s++;
+        // }, 1000);
+
+        var id = setInterval(function () {
+            document.write(new Date() + '<br>');
+            document.body.style.backgroundImage = img[s % img.length];
+            document.body.style.backgroundSize = '100%';
+            document.body.style.fontSize = '20px';
+            document.body.style.fontWeight = 'bold';
+            document.body.style.color = fontcolor[s % img.length];
+            s++;
+        }, 1000);
+
+        setTimeout(function () {
+            clearInterval(id);
+            document.write('DONE');
+        }, 10000);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

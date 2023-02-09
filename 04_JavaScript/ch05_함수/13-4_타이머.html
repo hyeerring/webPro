@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // 경고창 순서: 3 - 3 - 3
+        // for (var i = 0; i < 3; i++) {
+        //     setTimeout(function () { alert(i); }, 1000);
+        // }
+
+        // 경고창 순서: 0 - 1 - 2
+        // hint! 자기 호출함수 이용, 배열이용
+
+        // 1) 지역변수 이용
+        for (let i = 0; i < 3; i++) {
+            setTimeout(function () { alert(i); }, 1000);
+        }
+
+        // 2) 자기호출함수 이용
+        for (var i = 0; i < 3; i++) {
+            (function (j) {
+                setTimeout(function () { alert(j); }, 1000);
+            })(i);
+        }
+
+        // 3) 배열 이용
+        [0, 1, 2].forEach(function (date, idx) {
+            setTimeout(function () { alert(data); }, 0);
+        })
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

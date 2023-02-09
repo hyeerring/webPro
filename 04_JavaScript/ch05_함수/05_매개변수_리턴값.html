@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // var i = Number(prompt('i의 j승을 구하려합니다. i값을 입력하세요.'));
+        // var j = Number(prompt('j값을 입력하세요.'));
+        // document.write(i + '의 ' + j + '승 은 ' + pow(i, j) + '<br>');
+
+        // 선언된 매개변수보다 더 많은 경우 뒷 부분은 무시
+        document.write('pow(2, 4, 10) 승 은 ' + pow(2, 4, 10) + '<br>');
+
+        // 선언된 매개변수보다 적은 매개변수의 경우 나머지는 undefined
+        document.write('pow(2) 승 은 ' + pow(2) + '<br>'); // 1
+
+        // 매개변수가 없는 경우 undefined
+        document.write('pow() 승 은 ' + pow(2) + '<br>'); // 1
+
+        // x의 y승을 return하는 함수
+        function pow(x, y) {
+            var result = 1;
+            for (var cnt = 1; cnt <= y; cnt++) {
+                result *= x; // result * x;
+            }
+            return result;
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
