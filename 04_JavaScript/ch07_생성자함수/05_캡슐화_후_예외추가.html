@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function Rectangle(w, h) {
+            if (w < 0) {
+                throw '잘못된 입력 값입니다. 정수를 입력하세요.'; // 예외발생
+            } else {
+                var width = w;
+            }
+            if (h < 0) {
+                throw '잘못된 입력 값입니다. 정수를 입력하세요.'; // 예외발생
+            } else {
+                var height = h;
+            }
+            this.getWidth = function () {
+                return width;
+            };
+            this.getHeight = function () {
+                return height;
+            };
+            this.setWidth = function (w) {
+                if (w < 0) {
+                    throw '음수로는 수정 불가합니다.'
+                } else {
+                    width = w;
+                }
+            };
+            this.setHeight = function (h) {
+                if (h < 0) {
+                    throw '음수로는 수정 불가합니다.'
+                } else {
+                    height = h;
+                }
+            };
+        }; // 생성자함수
+
+        Rectangle.prototype.getArea = function () {
+            return this.getWidth() * this.getHeight();
+        }; // prototype
+
+        try {
+            var rect = new Rectangle(5, -7);
+        } catch (e) {
+            // 예외발생 --> 공사중 페이지로 이동
+            location.href = '공사중.html';
+
+        }
+
+        document.write('가로: ' + rect.getWidth() + '<br>');
+        document.write('세로: ' + rect.getHeight() + '<br>');
+        document.write('넓이: ' + rect.getArea() + '<br>');
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
