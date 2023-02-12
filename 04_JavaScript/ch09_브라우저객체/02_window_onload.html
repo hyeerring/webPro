@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // alert 순서 'Process1 전' --> 'Process1과 Process2사이' --> '윈도우가 로드'
+        // body가 다 뜬 후에 onload
+
+        window.onload = function () {
+            alert('윈도우가 로드')
+        };
+        alert('Process1 전')
+    </script>
+</head>
+
+<body>
+    <h3>Process- 1</h3>
+    <script>alert('Process1과 Process2사이');</script>
+    <h3>Process- 2</h3>
+</body>
+
+</html>

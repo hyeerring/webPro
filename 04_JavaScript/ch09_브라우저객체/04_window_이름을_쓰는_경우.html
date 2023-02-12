@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function openWin() {
+            var child = open('', 'childWin', 'width=500, height=300')
+            if (!child) {
+                alert('팝업 해제가 필요합니다.');
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <!-- <input type="button" value="중복확인"> -->
+    <!-- form 태그 안에서의 button은 submit이 되어버림 -->
+    <button onclick="openWin()">
+        새창열기
+    </button>
+    <br>
+    <a href="http://www.google.com" target="childWin">GOOGLE</a>
+</body>
+
+</html>
