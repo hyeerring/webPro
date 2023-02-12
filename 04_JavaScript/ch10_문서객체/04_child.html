@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #wrap {
+            width: 450px;
+            margin: 0 auto;
+        }
+
+        #wrap h1 {
+            color: gray;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        #wrap h3 {
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid gray;
+            text-align: center;
+            border-radius: 10px;
+            font-size: .9em;
+            cursor: pointer;
+        }
+
+        input {
+            height: 20px;
+            margin-left: 10px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            // parent와 child간의 데이터 통신
+            // parent에서 할 일 : child창 open()하기
+            // child에서 할 일 : opener(parent)의 id의 데이터 받아, 내 document 객체에 뿌리기
+            var name = opener.document.getElementById('name').value;
+            var date = opener.document.getElementById('date').value;
+            var parentData = document.getElementById('parentData');
+            parentData.innerHTML = '이름:' +
+                (name ? name : '없음') +
+                ' &nbsp; 날짜:' +
+                (date ? date : '날짜선택안함');
+            var modifyName = document.getElementById('modifyName');
+            modifyName.value = name;
+        };
+        function sendData(part) {
+            var modifyName = document.getElementById('modifyName').value;
+            opener.document.getElementById('name').value = modifyName;
+            opener.document.getElementById('part').innerHTML = part;
+            close();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>인사 정보 시스템</h1>
+        <hr>
+        <h2 id="parentData"></h2>
+        <h2>이름은 수정 가능합니다.<input type="text" id="modifyName"></h2>
+        <hr>
+        <h3 onclick="sendData('인사')">인사팀</h3>
+        <h3 onclick="sendData('재무')">재무팀</h3>
+        <h3 onclick="sendData('개발')">개발팀</h3>
+        <h3 onclick="sendData('홍보')">홍보팀</h3>
+    </div>
+</body>
+
+</html>

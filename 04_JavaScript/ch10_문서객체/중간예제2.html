@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table {
+            width: 400px;
+            height: 150px;
+            margin: 20px auto;
+            border: 1px solid blue;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function goNaver() {
+            location.href = 'http://www.naver.com';
+        };
+        function goDaum() {
+            location.href = 'https://www.daum.net/';
+        };
+        function goGoogle() {
+            location.href = 'https://www.google.com/';
+        };
+        function goYoutube() {
+            location.href = 'https://www.youtube.com/';
+        };
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <h1>중간예제2. 메뉴</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="네이버" onclick="goNaver()">
+                <input type="button" value="다음" onclick="goDaum()">
+                <input type="button" value="구글" onclick="goGoogle()">
+                <input type="button" value="유튜브" onclick="goYoutube()">
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

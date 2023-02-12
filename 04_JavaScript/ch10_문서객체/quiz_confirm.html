@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div#wrap {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var id = opener.document.getElementById('id').value;
+            document.getElementById('idchk').value = id;
+        }
+        function chk() {
+            alert('사용 가능한 아이디 입니다.');
+            close();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <p>
+            ID
+            <input type="text" id="idchk" value="" readonly="readonly">
+            <input type="button" value="체크" onclick="chk()">
+        </p>
+        <input type="button" value="아이디 사용">
+    </div>
+</body>
+
+</html>

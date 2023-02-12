@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var warp;
+        function append() {
+            // var wrap = document.getElementById('wrap');
+            // var wrap = document.getElementsByTagName('div')[0];
+            // var wrap = document.querySelector('div#wrap');
+            wrap = document.querySelectorAll('div#wrap')[0];
+            wrap.innerHTML += '<h1>HEADER</h1>';
+            var header = document.querySelectorAll('h1');
+            // for (var i in header) {
+            //     header[i].innerHTML += '#';
+            // }
+        }
+
+        function remove() {
+            var h1 = document.getElementsByTagName('h1');
+            // for (var i = h1.length - 1; i >= 0; i--) {
+            //     wrap.removeChild(h1[i]);
+            // }
+            var cnt = h1.length;
+            for (var i = 0; i < cnt; i++) {
+                wrap.removeChild(h1[0]);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <button onclick="remove()">h1태그 모두 제거</button>
+        <button onclick="append()">h1태그 추가</button>
+        <h1>HEADER</h1>
+        <h1>HEADER</h1>
+        <h1>HEADER</h1>
+    </div>
+</body>
+
+</html>

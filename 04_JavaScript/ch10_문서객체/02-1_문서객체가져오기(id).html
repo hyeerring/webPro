@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // getElementById
+        var header1, header2;
+        var id;
+        var header1toggle = 0, header2toggle = 0;
+        window.onload = function () {
+            header1 = document.getElementById('header_1');
+            header1.innerHTML = '날짜와 시간';
+            header2 = document.getElementById('header_2');
+            header2.innerHTML = new Date().toLocaleString();
+            id = setInterval(() => {
+                header2.innerHTML = new Date().toLocaleString();
+            }, 1000);
+        };
+        function change(n) {
+            if (n === 1) {
+                //header1토글
+                if (header1toggle === 0) {
+                    header1.innerHTML = '현재시간';
+                    header1toggle = 1;
+                } else if (header1toggle == 1) {
+                    header1.innerHTML = '날짜와 시간';
+                    header1toggle = 0;
+                }
+            } else if (n == 2) {
+                // 타이머(header2) 토글 
+                if (header2toggle == 0) {
+                    // 타이머 중지
+                    clearInterval(id);
+                    header2toggle = 1;
+                } else if (header2toggle == 1) {
+                    // 타이머 가동
+                    id = setInterval(() => {
+                        header2.innerHTML = new Date().toLocaleString();
+                    }, 1000);
+                    header2toggle = 0;
+                }
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <h1 id="header_1">HEADER_1</h1>
+    <h1 id="header_2">HEADER_2</h1>
+    <button onclick="change(1)">header_1 토글</button>
+    <button onclick="change(2)">header_2 토글(타이머토글)</button>
+</body>
+
+</html>

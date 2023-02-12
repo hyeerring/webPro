@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0px;
+        }
+
+        #wrap {
+            width: 300px;
+            margin: 50px auto;
+        }
+
+        #wrap h2 {
+            width: 250px;
+            padding: 20px 10px;
+            margin: 30px 15px;
+            border: 1px solid black;
+            background-color: rgb(215, 215, 215);
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #wrap input,
+        #wrap span {
+            width: 150px;
+            height: 20px;
+            display: inline-block;
+            border: 1px solid gray;
+            margin-left: 20px;
+        }
+
+        #wrap p {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function childOpen() {
+            var child = open('04_child.html', '', 'width=600, height=600, left=100');
+            if (!child) {
+                alert('팝업이 차단되었습니다.');
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <p>사원이름<input type="text" id="name"></p>
+        <p>소 속 명<span id="part"></span></p>
+        <p>결 제 일<input type="date" id="date"></p>
+        <h2 onclick="childOpen()">소속 부서 선택</h2>
+    </div>
+</body>
+
+</html>

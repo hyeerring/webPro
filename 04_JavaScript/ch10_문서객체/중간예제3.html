@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        table {
+            margin: 20px auto;
+        }
+
+        td {
+            width: 60px;
+            height: 120px;
+        }
+
+        td:first-child {
+            background-color: red;
+        }
+
+        td:nth-child(2) {
+            background-color: orange;
+        }
+
+        td:nth-child(3) {
+            background-color: yellow;
+        }
+
+        td:nth-child(4) {
+            background-color: green;
+        }
+
+        td:nth-child(5) {
+            background-color: blue;
+        }
+
+        td:nth-child(6) {
+            background-color: purple;
+        }
+
+        td:nth-child(7) {
+            background-color: violet;
+
+        }
+    </style>
+    <script>
+        var h1;
+        window.onload = function () {
+            h1 = document.getElementsByTagName('h1')[0];
+        };
+        function td1() {
+            h1.innerHTML = '야호! 거의 끝났다!';
+            document.body.style.backgroundColor = 'black';
+            h1.style.color = 'red';
+        }
+        function td2() {
+            h1.innerHTML = '야호! 거의 끝났다!';
+            document.body.style.backgroundColor = 'black';
+            h1.style.color = 'orange';
+        }
+        function td3() {
+            h1.innerHTML = '야호! 거의 끝났다!';
+            document.body.style.backgroundColor = 'black';
+            h1.style.color = 'yellow';
+        }
+        function td4() {
+            h1.innerHTML = '야호! 거의 끝났다!';
+            document.body.style.backgroundColor = 'black';
+            h1.style.color = 'green';
+        }
+        function td5() {
+            h1.innerHTML = '야호! 거의 끝났다!';
+            document.body.style.backgroundColor = 'black';
+            h1.style.color = 'blue';
+        }
+        function td6() {
+            h1.innerHTML = '야호! 거의 끝났다!';
+            document.body.style.backgroundColor = 'black';
+            h1.style.color = 'purple';
+        }
+        function td7() {
+            h1.innerHTML = '야호! 거의 끝났다!';
+            document.body.style.back
+            groundColor = 'black';
+            h1.style.color = 'violet';
+        }
+        function mouseOut() {
+            document.body.style.backgroundColor = 'white';
+            h1.innerHTML = '';
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td onmouseover="td1()" onmouseout="mouseOut()"></td>
+            <td onmouseover="td2()" onmouseout="mouseOut()"></td>
+            <td onmouseover="td3()" onmouseout="mouseOut()"></td>
+            <td onmouseover="td4()" onmouseout="mouseOut()"></td>
+            <td onmouseover="td5()" onmouseout="mouseOut()"></td>
+            <td onmouseover="td6()" onmouseout="mouseOut()"></td>
+            <td onmouseover="td7()" onmouseout="mouseOut()"></td>
+        </tr>
+    </table>
+    <h1></h1>
+</body>
+
+</html>

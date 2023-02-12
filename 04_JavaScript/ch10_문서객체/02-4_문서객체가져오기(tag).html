@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // getElementsByTagName
+        window.onload = function () {
+            var header = document.getElementsByTagName('h1'); // 배열
+            // header[0].innerHTML = '변경된 text';
+
+            // 일반 for문
+            // for (var idx = 0; idx < header.length; idx++) {
+            //     header[idx].innerHTML = '변경된 text#' + idx;
+            // }
+
+            // for-in
+            for (var idx in header) {
+                header[idx].innerHTML = '변경된 text#' + idx;
+            }
+
+            // for-each: 실행 X
+            // header.array.forEach((element, idx) => {
+            //     header[idx].innerHTML = '변경된 text#' + idx;
+            // });
+
+            // for-of문
+            for (var element of header) {
+                element.innerHTML = '변경된 text';
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+</body>
+
+</html>
