@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title></title>
     <script>
-        var str = 'abc@abcd@abc@';
-        document.write('원본: ' + str + '<br>');
-        document.write('@를 _로 변경: ' + str.replaceAll('@', '_') + '<br>');
-        document.write('@를 없애기: ' + str.replaceAll('@', '') + '<br>');
-        document.write('글씨 길이: ' + str.length + '<br>');
-        document.write('글씨 연결: ' + str.concat(str) + '<br>');
-        // str.substr(a, b); a번째부터 b개 글자 추출    
-        // str.substring(a, b); a번째부터 b번째 앞까지 추출
-        document.write('3번째부터 5개 글자 추출: ' + str.substr(3, 5) + '<br>');
-        document.write('3번째부터 5번째 앞까지 추출: ' + str.substring(3, 5) + '<br>');
-        document.write('첫번째 @가 나오는 위치: ' + str.indexOf('@') + '<br>');
-        document.write('첫번째 X가 나오는 위치: ' + str.indexOf('X') + '<br>'); // 없을 시 -1
-        document.write('뒤에서부터 첫번째 @가 나오는 위치: ' + str.lastIndexOf('@') + '<br>');
-        document.write('양쪽 space 없애기: ' + '  abc @ abcd @ abc @  '.trim() + '<br>');
-        document.write('space 모두 없애기: ' + '  abc @ abcd @ abc @  '.replaceAll(' ', '') + '<br>');
-        document.write('대문자로 전환: ' + str.toUpperCase() + '<br>');
-        document.write('소문자로 전환: ' + str.toLowerCase() + '<br>');
+      var str = "abc@abcd@abc@";
+      document.write("원본: " + str + "<br>");
+      document.write("@를 _로 변경: " + str.replaceAll("@", "_") + "<br>");
+      document.write("@를 없애기: " + str.replaceAll("@", "") + "<br>");
+      document.write("글씨 길이: " + str.length + "<br>");
+      document.write("글씨 연결: " + str.concat(str) + "<br>");
+      // str.substr(a, b); a번째부터 b개 글자 추출
+      // str.substring(a, b); a번째부터 b번째 앞까지 추출
+      document.write("3번째부터 5개 글자 추출: " + str.substr(3, 5) + "<br>");
+      document.write(
+        "3번째부터 5번째 앞까지 추출: " + str.substring(3, 5) + "<br>"
+      );
+      document.write("첫번째 @가 나오는 위치: " + str.indexOf("@") + "<br>");
+      document.write("첫번째 X가 나오는 위치: " + str.indexOf("X") + "<br>"); // 없을 시 -1
+      document.write(
+        "뒤에서부터 첫번째 @가 나오는 위치: " + str.lastIndexOf("@") + "<br>"
+      );
+      document.write(
+        "양쪽 space 없애기: " + "  abc @ abcd @ abc @  ".trim() + "<br>"
+      );
+      document.write(
+        "space 모두 없애기: " +
+          "  abc @ abcd @ abc @  ".replaceAll(" ", "") +
+          "<br>"
+      );
+      document.write("대문자로 전환: " + str.toUpperCase() + "<br>");
+      document.write("소문자로 전환: " + str.toLowerCase() + "<br>");
     </script>
     <script>
-        String.prototype.replaceAll = function (oldStr, newStr) {
-            return this.split(oldStr).join(newStr);
-        };
+      String.prototype.replaceAll = function (oldStr, newStr) {
+        return this.split(oldStr).join(newStr);
+      };
     </script>
-</head>
+  </head>
 
-<body>
-
-</body>
-
+  <body></body>
 </html>

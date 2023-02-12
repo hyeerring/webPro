@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title></title>
     <script>
-        /* 정규표현식(regex)
+      /* 정규표현식(regex)
         1. 참조 (https://goo.gl/HLntbd 위키백과)
         2. 간략문법  
         \d (숫자와 매치, [0-9]와 동일)
@@ -32,37 +31,42 @@
             => \w+@\w+(\.\w+){1,2}
         */
 
-        var str = 'abcd@!ef9';
-        // 패턴
-        var patternNum = /[0-9]/; // 숫자 패턴
-        var patternEng = /[a-z]/; // 알파벳문자 패턴
-        var patternKor = /[가-힣ㄱ-ㅎㅏ-ㅣ]/; // 한글문자 패턴 
-        var patternSpc = /[`~!@#$%^&*|\\\'\";:\(){}<>/?]/; // 특수문자 패턴
-        var patternMail = /^\w+@\w+(\.\w+){1,2}$/; // 패턴이 일치하는지 이메일 확인 용
+      var str = "abcd@!ef9";
+      // 패턴
+      var patternNum = /[0-9]/; // 숫자 패턴
+      var patternEng = /[a-z]/; // 알파벳문자 패턴
+      var patternKor = /[가-힣ㄱ-ㅎㅏ-ㅣ]/; // 한글문자 패턴
+      var patternSpc = /[`~!@#$%^&*|\\\'\";:\(){}<>/?]/; // 특수문자 패턴
+      var patternMail = /^\w+@\w+(\.\w+){1,2}$/; // 패턴이 일치하는지 이메일 확인 용
 
-        document.write('str에 숫자가 포함 여부: ' + patternNum.test(str) + '<br>');
-        document.write('str에 알파벳이 포함 여부: ' + patternEng.test(str) + '<br>');
-        document.write('str에 한글이 포함 여부: ' + patternKor.test(str) + '<br>');
-        document.write('str에 특수문자가 포함 여부: ' + patternSpc.test(str) + '<br>');
+      document.write(
+        "str에 숫자가 포함 여부: " + patternNum.test(str) + "<br>"
+      );
+      document.write(
+        "str에 알파벳이 포함 여부: " + patternEng.test(str) + "<br>"
+      );
+      document.write(
+        "str에 한글이 포함 여부: " + patternKor.test(str) + "<br>"
+      );
+      document.write(
+        "str에 특수문자가 포함 여부: " + patternSpc.test(str) + "<br>"
+      );
 
-        var email1 = 'hey00@google.com';
-        var email2 = 'hey00';
-        var email3 = 'hey00@google.co.kr';
-        // str.match(정규표현식 패턴) : 정규표현식 패턴과 맞는 text를 return. 없으면 null. return
-        document.write('email1: ' + email1.match(patternMail) + '<br>');
-        document.write('email2: ' + email2.match(patternMail) + '<br>');
-        document.write('email3: ' + email3.match(patternMail) + '<br>');
+      var email1 = "hey00@google.com";
+      var email2 = "hey00";
+      var email3 = "hey00@google.co.kr";
+      // str.match(정규표현식 패턴) : 정규표현식 패턴과 맞는 text를 return. 없으면 null. return
+      document.write("email1: " + email1.match(patternMail) + "<br>");
+      document.write("email2: " + email2.match(patternMail) + "<br>");
+      document.write("email3: " + email3.match(patternMail) + "<br>");
 
-        if (email2.match(patternMail)) {
-            document.write('email2는 일치합니다.');
-        } else {
-            document.write('email2는 일치하지 않습니다.');
-        }
+      if (email2.match(patternMail)) {
+        document.write("email2는 일치합니다.");
+      } else {
+        document.write("email2는 일치하지 않습니다.");
+      }
     </script>
-</head>
+  </head>
 
-<body>
-
-</body>
-
+  <body></body>
 </html>
