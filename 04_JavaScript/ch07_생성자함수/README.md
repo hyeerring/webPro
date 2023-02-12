@@ -21,19 +21,10 @@ function Student(name, kor, mat, eng) {
     this.getAvg = function () {
         return this.getSum() / 3;
     };
-    this.toString = function () {
-        let output = '';
-        for (var key in this) {
-            if (key != 'getSum' && key != 'getAvg' && key != 'toString') {
-                output += key + ' : ' + this[key] + ' &nbsp; ';
-            } else if (key == 'getSum' || key == 'getAvg') {
-                output += key.substring(3).toUpperCase() + ' : ' + this[key]() + ' &nbsp; ';
-            }
-        }
-        return output;
-    };
 }
 
 let students = [new Student('kim', 95, 95, 100)];
+
+students.push(new Student('lee', 90, 90, 100));
 ```
 
