@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function Student(name, kor, mat) { // 생성자함수
+            this.name = name;
+            this.kor = kor;
+            this.mat = mat;
+        };
+        Student.prototype.getSum = function () {
+            return this.kor + this.mat;
+        };
+        Student.prototype.getAvg = function () {
+            return this.getSum() / 2;
+        };
+        Student.prototype.toString = function () {
+            return this.name + ' 국어: ' + this.kor + ' 수학: ' + this.mat + ' 합계: ' + this.getSum() + ' 평균: ' + this.getAvg() + '<br>'
+        };
+        // 생성자함수 & prototype
+
+        var students = [new Student('일길동', 100, 95),
+        new Student('삼길동', 75, 80),
+        new Student('오길동', 100, 100),
+        new Student('이길동', 45, 60),
+        new Student('사길동', 65, 70),]
+
+        var originalStudents = []; // 깊은 복사 (vs 얕은 복사 : 주소값 할당)
+        students.forEach(function (data) {
+            originalStudents.push(data);
+        });
+
+        document.write('<h4>정렬 전</h4>');
+        originalStudents.forEach(function (data, idx) {
+            document.write(idx + ' : ' + data);
+        });
+
+        students.sort();
+        document.write('<h4>ascii 코드 순 정렬</h4>');
+        students.forEach(function (data, idx) {
+            document.write(idx + ' : ' + data);
+        });
+
+        // 총점 기준으로 내림차순
+        students.sort(function (left, right) {
+            return right.getSum() - left.getSum(); // 양수면 left가 앞으로
+        });
+        document.write('<h4>총점 기준 내림차순 정렬</h4>');
+        students.forEach(function (data, idx) {
+            document.write(idx + ' : ' + data);
+        });
+
+        // 국어 점수 기준으로 오름차순
+        students.sort(function (left, right) {
+            return left.kor - right.kor;
+        });
+        document.write('<h4>국어 점수 기준 오름차순 정렬</h4>');
+        students.forEach(function (data, idx) {
+            document.write(idx + ' : ' + data);
+        });
+
+        // 평균 기준으로 top 3 추출
+        students.sort(function (left, right) {
+            return right.getAvg() - left.getAvg();
+        });
+        document.write('<h4>평균기준 TOP 3</h4>');
+        students.slice(0, 3).forEach(function (data, idx) {
+            document.write(idx + ' : ' + data);
+        });
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

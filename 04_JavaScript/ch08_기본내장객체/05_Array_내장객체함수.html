@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var arr1 = new Array('def', 'abc', 'jkl', 'ghi', 'az');
+        var arr2 = [50, 15, 20, 25, 10, 100];
+
+        document.write('arr1의 정렬 전: ' + arr1 + '<br>');
+        arr1.sort(); // ascii 코드 순으로 정렬
+        document.write('arr1의 정렬 후: ' + arr1 + '<br>');
+
+        document.write('arr2의 정렬 전: ' + arr2 + '<br>');
+        // ----- 내림차순 정렬
+        arr2.sort(function (left, right) {
+            return right - left;
+            //     if (left < right) { // 내림차순 정렬(큰 값 --> 작은 값)
+            //         return 1; // 양수면 right가 먼저(자리를 바꿈)
+            //     } else if (left > right) {
+            //         return -1; // 음수면 left가 먼저
+            //     } else {
+            //         return 0;
+            //     }
+        });
+        document.write('arr2의 내림차순 정렬: ' + arr2 + '<br>');
+
+        // ----- 오름차순 정렬
+        arr2.sort(function (left, right) {
+            return left - right;
+        });
+        document.write('arr2의 오름차순 정렬: ' + arr2 + '<br>');
+
+        arr2.reverse(); // 배열 요소 순서를 뒤집는다
+        document.write('arr2.reverse(): ' + arr2 + '<br>');
+        var slicedArr = arr2.slice(0, 3); // 0번째부터 3번째 앞까지 추출
+        document.write('arr2.slice(0, 3): ' + slicedArr + '<br>');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

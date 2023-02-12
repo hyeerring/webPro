@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="dateIntervalDay.js"></script>
+    <script>
+        var today = new Date();
+        document.write('현재시간: ' + today + '<br>');
+        document.write('현재시간: ' + today.toLocaleString() + '<br>');
+        document.write('날짜: ' + today.toLocaleDateString() + '<br>');
+        document.write('시간: ' + today.toLocaleTimeString() + '<br>');
+
+        var birth = new Date(2023, 1, 2, 12, 0, 0); // 23년 생일: 23년 2월 2일
+        var nextbirth = new Date(2024, 1, 2, 12, 0, 0); // 24년 생일: 24년 2월 2일
+
+        document.write('생일까지 ' + today.getIntervalDay(birth) + '일 남았습니다.' + '<br>');
+        document.write('내년 생일까지 ' + today.getIntervalDay(nextbirth) + '일 남았습니다.' + '<br>');
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

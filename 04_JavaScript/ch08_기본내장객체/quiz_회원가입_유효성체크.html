@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            margin: 10px auto;
+            outline: 3px solid #385d81;
+            padding: 20px 40px;
+        }
+
+        th,
+        td {
+            padding: 8px;
+        }
+
+        ul {
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+            list-style: none;
+            width: 94px;
+            text-align: center;
+        }
+
+        input[type='text'],
+        input[type='password'] {
+            size: 4em;
+            border: 2px solid #385d81;
+            padding: 4px 2px;
+        }
+
+        input[type='submit'],
+        input[type='reset'],
+        input[type='button'] {
+            padding: 8px 12px;
+            color: white;
+            background-color: #385d81e3;
+            border-radius: 5px;
+            width: 86px;
+        }
+    </style>
+    <script>
+        /*정규표현식 : 정규표현식 연습장(http://www.regexr.com)을 통해 만들어진 정규표현식 test
+        [0-9] : 0~9 사이 중 한문자
+        [a-zA-Z] : 알파벳 중 한문자
+        [가-힣] : 한글 중 한문자
+        [가-힣ㄱ-ㅎㅏ-ㅣ] : 한글, 자음, 모음 중 한문자
+        {n} : n번 반복
+        {n,m} : 최소 n번, 최대 m번 반복 (0<n<=m)
+        \d : 숫자 [0-9]와 동일
+        \w : 문자(숫자와 알파벳) 중 한문자
+        +  : 1번 이상 반복
+         * : 0번 이상 반복
+        .  : '\n'을 제외한 임의의 한문자 자리수
+        \. : .문자
+        */
+        function chk() {
+            var patternNum = /[0-9]/; // 숫자 패턴 (test함수 사용)
+            var patternLower = /[a-z]/; // 소문자패턴
+            var patternUpper = /[A-Z]/; // 대문자패턴    
+            var patternSpc = /[~`!@#$%^&*()-_+=|\\\[\]{}'";:?,.\/]/; // 특수문자패턴(\\->\, \/->/, \[->[, \]->])
+            var patternMail = /^[a-zA-Z0-9_\.]+@[a-zA-Z0-9_]+(\.\w+){1,2}$/; // math함수 사용
+
+            var name = frm.name.value.trim();
+            var mail = frm.mail.value.trim();
+            var pw = frm.pw.value.trim();
+            var pwchk = frm.pwchk.value.trim();
+            if (!name) {
+                alert('이름은 필수 입력사항입니다.');
+                frm.name.focus();
+                return false;
+            } else if (patternNum.test(name) || patternSpc.test(name)) {
+                alert('이름에는 숫자 또는 특수문자가 들어갈 수 없습니다.')
+                frm.name.focus();
+                return false;
+            } else if (!mail) {
+                alert('메일은 필수 입력사항입니다.');
+                frm.mail.focus();
+                return false;
+            } else if (!mail.match(patternMail)) {
+                alert('메일 형식을 확인하세요.');
+                frm.mail.focus();
+                return false;
+            } else if (!pw) {
+                alert('비밀번호는 필수 입력사항입니다.');
+                frm.pw.focus();
+                return false;
+            } else if (pw != pwchk) {
+                alert('비밀번호가 일치하지 않습니다.');
+                frm.pw.value = '';
+                frm.pwchk.value = '';
+                frm.pw.focus();
+                return false;
+            } else if (!patternNum.test(pw) ||
+                !patternLower.test(pw) ||
+                !patternUpper.test(pw) ||
+                !patternSpc.test(pw) ||
+                pw.length < 4) {
+                alert('비밀번호는 숫자, 대문자, 소문자, 특수문자 포함하여 4글자 이상으로 작성하세요.');
+                frm.pw.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <form action="" method="get" name="frm" onsubmit="return chk()">
+            <tr>
+                <th>이름</th>
+                <td><input type="text" name="name" placeholder="특수문자 숫자 입력 불가"></td>
+            </tr>
+            <tr>
+                <th>메일</th>
+                <td><input type="text" name="mail" placeholder="메일 형식에 맞추세요"></td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td><input type="password" name="pw"></td>
+            </tr>
+            <tr>
+                <th>비밀번호 확인</th>
+                <td><input type="password" name="pwchk"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <ul>
+                        <li><input type="submit" value="회원가입"></li>
+                        <li><input type="reset" value="취소"></li>
+                        <li><input type="button" value="로그인"></li>
+                    </ul>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>

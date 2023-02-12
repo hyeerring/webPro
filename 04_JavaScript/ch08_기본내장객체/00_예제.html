@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table {
+            width: 350px;
+            margin: 20px auto;
+            padding: 20px 10px;
+        }
+
+        table,
+        input[type='text'],
+        input[type='password'] {
+            border: 1px solid #385d81;
+            padding: 2px;
+        }
+
+        input[type='submit'],
+        input[type='reset'],
+        input[type='button'],
+        button {
+            background-color: #385d81;
+            border: 0;
+            outline: 0;
+            color: white;
+            border-radius: 3px;
+            padding: 10px 20px;
+            margin: 5px;
+        }
+
+        td,
+        th {
+            padding: 5px 10px;
+            text-align: center;
+        }
+
+        ul {
+            border: 1px solid black;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+            list-style: none;
+            border: 1px solid black;
+            margin: 0;
+        }
+    </style>
+    <script>
+
+
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>이름</th>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <th>메일</th>
+            <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+            <th>비밀번호</th>
+            <td><input type="password" name="pw"></td>
+        </tr>
+        <tr>
+            <th>비밀번호</th>
+            <td><input type="password" name="pwchk"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <ul>
+                    <li><input type="submit" value="회원가입"></li>
+                    <li><input type="reset" value="취소"></li>
+                    <li><input type="button" value="로그인"></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
