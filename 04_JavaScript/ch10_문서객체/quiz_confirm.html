@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title></title>
     <style>
-        div#wrap {
-            text-align: center;
-            margin-top: 30px;
-        }
+      p {
+        text-align: center;
+        margin-top: 30px;
+      }
     </style>
     <script>
-        window.onload = function () {
-            var id = opener.document.getElementById('id').value;
-            document.getElementById('idchk').value = id;
-        }
-        function chk() {
-            alert('사용 가능한 아이디 입니다.');
-            close();
-        }
+      var id, openerId;
+      window.onload = function () {
+        openerId = opener.document.getElementById("id");
+        id = document.getElementsByName("id")[0];
+        id.value = openerId.value;
+      };
+      function confirmOK() {
+        openerId.value = id.value;
+        close();
+      }
     </script>
-</head>
+  </head>
 
-<body>
-    <div id="wrap">
-        <p>
-            ID
-            <input type="text" id="idchk" value="" readonly="readonly">
-            <input type="button" value="체크" onclick="chk()">
-        </p>
-        <input type="button" value="아이디 사용">
-    </div>
-</body>
-
+  <body>
+    <p>
+      ID <input type="text" name="id" />
+      <button>체크</button>
+    </p>
+    <p><button onclick="confirmOK();">아이디사용</button></p>
+  </body>
 </html>

@@ -1,88 +1,52 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title></title>
     <style>
-        table {
-            margin: 20px auto;
-        }
+      table {
+        margin: 20px auto;
+      }
 
-        td {
-            width: 60px;
-            height: 120px;
-        }
-
-        td:first-child {
-            background-color: red;
-        }
-
-        td:nth-child(2) {
-            background-color: orange;
-        }
-
-        td:nth-child(3) {
-            background-color: yellow;
-        }
-
-        td:nth-child(4) {
-            background-color: green;
-        }
-
-        td:nth-child(5) {
-            background-color: blue;
-        }
-
-        td:nth-child(6) {
-            background-color: purple;
-        }
-
-        td:nth-child(7) {
-            background-color: violet;
-
-        }
+      td {
+        width: 60px;
+        height: 120px;
+      }
     </style>
     <script>
-        function td1() {
-            document.body.style.backgroundColor = 'red';
+      var color = [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "navy",
+        "violet",
+        "white",
+      ];
+      window.onload = function () {
+        var tds = document.querySelectorAll("td");
+        for (var idx in tds) {
+          tds[idx].style = "background-color:" + color[idx];
         }
-        function td2() {
-            document.body.style.backgroundColor = 'orange';
-        }
-        function td3() {
-            document.body.style.backgroundColor = 'yellow';
-        }
-        function td4() {
-            document.body.style.backgroundColor = 'green';
-        }
-        function td5() {
-            document.body.style.backgroundColor = 'blue';
-        }
-        function td6() {
-            document.body.style.backgroundColor = 'purple';
-        }
-        function td7() {
-            document.body.style.backgroundColor = 'violet';
-        }
-        function mouseOut() {
-            document.body.style.backgroundColor = 'white';
-        }
+      };
+      function bgChange(n) {
+        document.body.style.backgroundColor = color[n];
+      }
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <table>
-        <tr>
-            <td onmouseover="td1()" onmouseout="mouseOut()"></td>
-            <td onmouseover="td2()" onmouseout="mouseOut()"></td>
-            <td onmouseover="td3()" onmouseout="mouseOut()"></td>
-            <td onmouseover="td4()" onmouseout="mouseOut()"></td>
-            <td onmouseover="td5()" onmouseout="mouseOut()"></td>
-            <td onmouseover="td6()" onmouseout="mouseOut()"></td>
-            <td onmouseover="td7()" onmouseout="mouseOut()"></td>
-        </tr>
+      <tr onmouseout="bgChange(7)">
+        <td onmouseover="bgChange(0)"></td>
+        <td onmouseover="bgChange(1)"></td>
+        <td onmouseover="bgChange(2)"></td>
+        <td onmouseover="bgChange(3)"></td>
+        <td onmouseover="bgChange(4)"></td>
+        <td onmouseover="bgChange(5)"></td>
+        <td onmouseover="bgChange(6)"></td>
+      </tr>
     </table>
-</body>
-
+  </body>
 </html>

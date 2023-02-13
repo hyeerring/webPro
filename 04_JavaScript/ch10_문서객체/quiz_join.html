@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title></title>
     <style>
-        div#wrap {
-            text-align: center;
-            margin-top: 30px;
-        }
+      p {
+        text-align: center;
+        margin-top: 30px;
+      }
     </style>
     <script>
-        function childOpen() {
-            var child = open('quiz_confirm.html', '', 'width=500, height=200, left=100');
-            if (!child) {
-                alert('팝업이 차단되었습니다.');
-            }
-        };
+      function openConfirm() {
+        var child = open(
+          "quiz_confirm.html",
+          "",
+          "width=500, height=200, left=100"
+        );
+        if (!child) {
+          alert("팝업이 차단되었습니다.");
+        }
+      }
     </script>
-</head>
+  </head>
 
-<body>
-    <div id="wrap">
-        <p>
-            아이디
-            <input type="text" id="id">
-            <input type="button" value="중복확인" onclick="childOpen()">
-        </p>
-        <input type="button" value="회원가입">
-    </div>
-</body>
-
+  <body>
+    <form>
+      <p>
+        아이디 <input type="text" name="id" id="id" />
+        <input type="button" value="중복확인" onclick="openConfirm();" />
+      </p>
+    </form>
+  </body>
 </html>

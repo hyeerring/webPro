@@ -1,54 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title></title>
     <style>
-        table {
-            width: 400px;
-            height: 150px;
-            margin: 20px auto;
-            border: 1px solid blue;
-            text-align: center;
-        }
+      table {
+        width: 400px;
+        height: 150px;
+        margin: 20px auto;
+        border: 1px solid blue;
+        text-align: center;
+      }
 
-        h1 {
-            margin: 10px;
-        }
+      h1 {
+        margin: 10px;
+      }
     </style>
     <script>
-        function goNaver() {
-            location.href = 'http://www.naver.com';
-        };
-        function goDaum() {
-            location.href = 'https://www.daum.net/';
-        };
-        function goGoogle() {
-            location.href = 'https://www.google.com/';
-        };
-        function goYoutube() {
-            location.href = 'https://www.youtube.com/';
-        };
+      function go(num) {
+        var url = [
+          "http://www.naver.com",
+          "http://www.daum.net",
+          "http://www.google.com",
+          "http://www.youtube.com",
+        ];
+        location.href = url[num];
+      }
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <table>
-        <tr>
-            <td>
-                <h1>중간예제2. 메뉴</h1>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="button" value="네이버" onclick="goNaver()">
-                <input type="button" value="다음" onclick="goDaum()">
-                <input type="button" value="구글" onclick="goGoogle()">
-                <input type="button" value="유튜브" onclick="goYoutube()">
-            </td>
-        </tr>
+      <tr>
+        <td>
+          <h1>중간예제2. 메뉴</h1>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button onclick="go(0)">네이버</button>
+          <button onclick="go(1)">다음</button>
+          <button onclick="go(2)">구글</button>
+          <button onclick="go(3)">유투브</button>
+        </td>
+      </tr>
     </table>
-</body>
-
+  </body>
 </html>

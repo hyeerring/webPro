@@ -1,113 +1,64 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title></title>
     <style>
-        body {
-            text-align: center;
-        }
-
-        table {
-            margin: 20px auto;
-        }
-
-        td {
-            width: 60px;
-            height: 120px;
-        }
-
-        td:first-child {
-            background-color: red;
-        }
-
-        td:nth-child(2) {
-            background-color: orange;
-        }
-
-        td:nth-child(3) {
-            background-color: yellow;
-        }
-
-        td:nth-child(4) {
-            background-color: green;
-        }
-
-        td:nth-child(5) {
-            background-color: blue;
-        }
-
-        td:nth-child(6) {
-            background-color: purple;
-        }
-
-        td:nth-child(7) {
-            background-color: violet;
-
-        }
+      h2 {
+        text-align: center;
+      }
+      table {
+        width: 280px;
+        height: 100px;
+        margin: 10px auto;
+      }
     </style>
     <script>
-        var h1;
-        window.onload = function () {
-            h1 = document.getElementsByTagName('h1')[0];
-        };
-        function td1() {
-            h1.innerHTML = '야호! 거의 끝났다!';
-            document.body.style.backgroundColor = 'black';
-            h1.style.color = 'red';
+      var color = [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "navy",
+        "violet",
+        "white",
+      ];
+      window.onload = function () {
+        var tds = document.querySelectorAll("td");
+        for (var idx in tds) {
+          tds[idx].style = "background-color:" + color[idx];
         }
-        function td2() {
-            h1.innerHTML = '야호! 거의 끝났다!';
-            document.body.style.backgroundColor = 'black';
-            h1.style.color = 'orange';
-        }
-        function td3() {
-            h1.innerHTML = '야호! 거의 끝났다!';
-            document.body.style.backgroundColor = 'black';
-            h1.style.color = 'yellow';
-        }
-        function td4() {
-            h1.innerHTML = '야호! 거의 끝났다!';
-            document.body.style.backgroundColor = 'black';
-            h1.style.color = 'green';
-        }
-        function td5() {
-            h1.innerHTML = '야호! 거의 끝났다!';
-            document.body.style.backgroundColor = 'black';
-            h1.style.color = 'blue';
-        }
-        function td6() {
-            h1.innerHTML = '야호! 거의 끝났다!';
-            document.body.style.backgroundColor = 'black';
-            h1.style.color = 'purple';
-        }
-        function td7() {
-            h1.innerHTML = '야호! 거의 끝났다!';
-            document.body.style.back
-            groundColor = 'black';
-            h1.style.color = 'violet';
-        }
-        function mouseOut() {
-            document.body.style.backgroundColor = 'white';
-            h1.innerHTML = '';
-        }
+      };
+      function showMessage(n) {
+        var h2 = document.createElement("h2");
+        var textNode = document.createTextNode("Hello JavaScript!");
+        h2.appendChild(textNode);
+        h2.setAttribute("class", "message");
+        document.body.appendChild(h2);
+        h2.style.color = color[n];
+        document.body.style.backgroundColor = "black";
+      }
+      function removeMassage() {
+        var message = document.getElementsByClassName("message");
+        document.body.removeChild(message[0]);
+        document.body.style.backgroundColor = "white";
+      }
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
+    <h2>중간예제3. 마우스를 올리면 바탕화면에 해당 색 메세지가 나오도록</h2>
     <table>
-        <tr>
-            <td onmouseover="td1()" onmouseout="mouseOut()"></td>
-            <td onmouseover="td2()" onmouseout="mouseOut()"></td>
-            <td onmouseover="td3()" onmouseout="mouseOut()"></td>
-            <td onmouseover="td4()" onmouseout="mouseOut()"></td>
-            <td onmouseover="td5()" onmouseout="mouseOut()"></td>
-            <td onmouseover="td6()" onmouseout="mouseOut()"></td>
-            <td onmouseover="td7()" onmouseout="mouseOut()"></td>
-        </tr>
+      <tr onmouseout="removeMassage()">
+        <td onmouseover="showMessage(0)"></td>
+        <td onmouseover="showMessage(1)"></td>
+        <td onmouseover="showMessage(2)"></td>
+        <td onmouseover="showMessage(3)"></td>
+        <td onmouseover="showMessage(4)"></td>
+        <td onmouseover="showMessage(5)"></td>
+        <td onmouseover="showMessage(6)"></td>
+      </tr>
     </table>
-    <h1></h1>
-</body>
-
+  </body>
 </html>
