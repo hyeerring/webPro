@@ -1,0 +1,12 @@
+﻿
+table {
+    background-color: black;
+    margin: 30px 50px 30px 50px; /* 마진 : 상 우 하 좌 */
+}
+tr {
+    background-color: white;
+}
+td {
+    padding: 5px 10px;
+    text-align: center; /* 글씨 중앙정렬 */
+}
