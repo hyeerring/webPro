@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        img {
+            position: absolute;
+            display: none;
+            z-index: -10;
+        }
+    </style>
+    <script>
+        window.onclick = function () {
+            var x = event.offsetX;
+            var y = event.offsetY;
+            var msg = document.querySelector('p');
+            msg.innerHTML = 'screen 좌표 : ' + event.screenX + ', ' + event.screenY + '<Br>';
+            msg.innerHTML += 'offset 좌표 : ' + x + ', ' + y + '<br>';
+            var img = document.querySelector('img');
+            img.style.display = 'inline';
+            img.style.left = x + 'px';
+            img.style.top = y + 'px';
+        }
+
+    </script>
+</head>
+
+<body>
+    <p>클릭하면 클릭한 곳에 말이 옮겨지고 좌표가 출력됩니다.</p>
+    <img src="img/car.gif" alt="목마">
+</body>
+
+</html>

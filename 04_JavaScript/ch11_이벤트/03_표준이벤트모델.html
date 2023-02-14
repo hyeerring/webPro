@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+      h1 {
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        // var header = document.querySelector('h1#header');
+        var header = document.getElementById("header");
+        header.addEventListener("click", () => {
+          alert("반갑습니다.");
+        });
+      };
+    </script>
+  </head>
+
+  <body>
+    <h1 id="header">Click Me!</h1>
+  </body>
+</html>

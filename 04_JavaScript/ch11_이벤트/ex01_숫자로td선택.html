@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table {
+            width: 500px;
+            margin: 20px auto;
+            background-color: black;
+        }
+
+        td {
+            padding: 50px;
+            text-align: center;
+            background-color: white;
+        }
+    </style>
+    <script>
+        window.onkeyup = function () {
+            // 우측숫자: 96(0), 97(1) ... 104(8)
+            // 상단숫자: 48(0), 49(1) ... 56(8)
+            var tds = document.getElementsByTagName('td');
+            var key = event.keyCode;
+            if (key >= 96 && key <= 104) { // 키보드 우측 숫자패드
+                for (var i = 0; i < tds.length; i++) {
+                    tds[i].style.backgroundColor = 'white';
+                }
+                tds[key - 96].style.backgroundColor = 'yellow';
+            } else if (key >= 48 && key <= 56) { // 키보드 상단 숫자
+                for (var i = 0; i < tds.length; i++) {
+                    tds[i].style.backgroundColor = 'white';
+                }
+                tds[key - 48].style.backgroundColor = 'yellow';
+            }
+        };
+
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+</body>
+
+</html>

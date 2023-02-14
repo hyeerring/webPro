@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var overImg = ['0over', '1over', '2over', '3over']
+        var outImg = ['0out', '1out', '2out', '3out']
+        function over(n) {
+            var button = document.querySelectorAll('img')[n];
+            button.setAttribute('src', 'img/' + overImg[n] + '.jpg');
+        };
+        function out(n) {
+            var button = document.querySelectorAll('img')[n];
+            button.setAttribute('src', 'img/' + outImg[n] + '.jpg');
+        };
+    </script>
+</head>
+
+<body>
+    <img src="img/0out.jpg" alt="tutorial" onmouseover="over(0)" onmouseout="out(0)">
+    <img src="img/1out.jpg" alt="Example" onmouseover="over(1)" onmouseout="out(1)">
+    <img src="img/2out.jpg" alt="Special" onmouseover="over(2)" onmouseout="out(2)">
+    <img src="img/3out.jpg" alt="Link" onmouseover="over(3)" onmouseout="out(3)">
+</body>
+
+</html>

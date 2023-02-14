@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onkeyup = function () {
+            let key = event.keyCode; // event.keyCode: 입력된 키의 코드 값
+            // alert(key);
+            // 우측숫자: 96(0), 97(1) ... 105(9)
+            // 상단숫자: 48(0), 49(1) ... 57(9)
+            // 알파벳: A(65), B(66), C(67) ... Z(90)
+            if (key >= 48 && key <= 57) { // 상단숫자
+                alert('상단키 숫자 ' + (key - 48) + ' 입력');
+            } else if (key >= 96 && key <= 105) {
+                alert('키보드 오른쪽패드 숫자 ' + (key - 96) + ' 입력');
+            } else if (key >= 65 && key <= 90) {
+                alert('문자 ' + String.fromCodePoint(key) + ' 입력');
+            }
+        };
+        window.onclick = function () {
+            document.body.innerHTML =
+                'screen 좌표 : ' + event.screenX + ',' + event.screenY + '<Br>';
+            document.body.innerHTML +=
+                'offset 좌표 : ' + event.offsetX + ',' + event.offsetY + '<Br>';
+            // var img = document.getElementsByName('img')[0];
+        };
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

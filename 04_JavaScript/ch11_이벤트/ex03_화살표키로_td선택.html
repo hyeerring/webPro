@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table {
+            width: 500px;
+            margin: 20px auto;
+            background-color: black;
+        }
+
+        td {
+            padding: 50px;
+            text-align: center;
+            background-color: white;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var tds = document.getElementsByTagName('td');
+            var idx = 4; // 현위치
+            tds[idx].style.backgroundColor = 'yellow';
+            var positionIdx = document.querySelector('p');
+            this.onkeyup = function () {
+                switch (event.keyCode) {
+                    case 37: // 좌
+                        if (idx % 3 != 0) {
+                            idx--;
+                        }
+                        break;
+                    case 38: // 상
+                        if (idx >= 3) {
+                            idx -= 3;
+                        }
+                        break;
+                    case 39: // 우
+                        if (idx % 3 != 2) {
+                            idx += 1;
+                        }
+                        break;
+                    case 40: // 하
+                        if (idx <= 5) {
+                            idx += 3;
+                        }
+                        break;
+
+                }
+                for (var i = 0; i < tds.length; i++) {
+                    tds[i].style.backgroundColor = 'white';
+                }
+                tds[idx].style.backgroundColor = 'yellow';
+                positionIdx.innerHTML = '현위치: ' + idx;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <p class="position">Start!</p>
+</body>
+
+</html>

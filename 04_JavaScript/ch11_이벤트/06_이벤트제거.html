@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- click 이벤트 5번 발생 후 이벤트 제거 -->
+    <style>
+        h1 {
+            cursor: pointer;
+        }
+
+        span:nth-child(1) {
+            color: lavenderblush;
+        }
+
+        span:nth-child(2) {
+            color: mistyrose;
+        }
+
+        span:nth-child(3) {
+            color: pink;
+        }
+
+        span:nth-child(4) {
+            color: thistle;
+        }
+
+        span:nth-child(5) {
+            color: plum;
+        }
+    </style>
+    <script>
+        var cnt = 0;
+        window.onload = function () {
+            document.querySelector('h1').onclick = function () {
+                this.innerHTML += '<span>♥</span>'
+                // click 이벤트는 5번만 가능하도록: 5번째 클릭 이벤트 발생 시 이벤트 제거
+                cnt++;
+                if (cnt >= 5) {
+                    this.onclick = null;
+                }
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <h1>좋아요</h1>
+</body>
+
+</html>
