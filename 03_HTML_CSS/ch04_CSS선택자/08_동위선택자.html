@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        h3~div {
+            /* h3 다음에 오는 div 형제 모두 */
+            color: orange;
+        }
+
+        h3+div {
+            /* h3 바로 다음에 오는 div 형제 태그 하나 */
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div>div00</div>
+    <h3>동위선택자 (+: 바로 다음에 오는 형제, ~: 다음에 오는 형제 모두)</h3>
+    <div>div01</div>
+    <div>div02</div>
+    <div>div03</div>
+    <div>div04</div>
+    <div>div05</div>
+</body>
+
+</html>

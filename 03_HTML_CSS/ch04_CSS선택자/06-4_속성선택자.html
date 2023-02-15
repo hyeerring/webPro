@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div#wrap {
+            width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        div#header {
+            color: orange;
+        }
+
+        div#section {
+            color: green;
+        }
+
+        div#section img[src $='bmp'] {
+            border: 3px solid blue;
+        }
+
+        div#section img[src $='gif'] {
+            border: 3px solid red;
+        }
+
+        div#section img[src $='jpg'] {
+            border: 3px solid yellow;
+        }
+
+        div#section img[src $='png'] {
+            border: 3px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="header">
+            <h1>자바 스크립트 책 목록</h1>
+        </div>
+        <div id="section">
+            <img src="book/book.bmp" />
+            <img src="book/book.gif" />
+            <img src="book/book.jpg" />
+            <img src="book/book.png" />
+            <br>
+            <h3>경기도 고양시 일산동구 해태쇼핑 2층</h3>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        #header {
+            text-align: center;
+            border-bottom: 1px solid gray;
+        }
+
+        #content {
+            padding: 0 10px;
+            text-align: justify;
+        }
+
+        #content ul li a {
+            color: blue;
+            text-decoration: none;
+            font-size: large;
+        }
+
+        #content ul li a:after {
+            /* 링크선택자 */
+            content: ' - ' attr(href);
+        }
+
+        #content ul li a:not(.web) {
+            background-color: lightgray;
+        }
+
+        #content ul li.web a {
+            background-color: yellow;
+        }
+
+        #footer {
+            border-top: 1px solid gray;
+            overflow: hidden;
+        }
+
+        #footer ul li {
+            float: left;
+            list-style: none;
+        }
+
+        #footer ul li:first-child {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>제목 및 회사명(링크선택자, 부정선택자)</h1>
+        </div>
+        <div id="content">
+            <ul>
+                <li><a href="https://www.naver.com" target="_blank">Naver</a></li>
+                <li class="web"><a href="https://www.google.com" target="_blank">Google</a></li>
+                <li><a href="https://www.kakaocorp.com" target="_blank">kakao</a></li>
+                <li><a href="https://www.yahoo.com/" target="_blank">Yahoo!</a></li>
+            </ul>
+        </div>
+        <div id="footer">
+            <ul>
+                <li>
+                    <img src="0112/logo.png" alt="회사로고" />
+                    <img src="0112/add.png" alt="회사정보" />
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

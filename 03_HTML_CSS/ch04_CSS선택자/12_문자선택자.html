@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        #header {
+            text-align: center;
+            border-bottom: 1px solid gray;
+        }
+
+        #content {
+            padding: 0 10px;
+            text-align: justify;
+        }
+
+        #content p:nth-child(2)::first-line,
+        /* 문자선택자 */
+        #content p:nth-child(3)::first-line {
+            color: blue;
+            font-weight: bold;
+        }
+
+        #content p:nth-child(2)::first-letter,
+        #content p:nth-child(3)::first-letter {
+            font-size: 2em;
+            /* 원래크기의 2배 */
+        }
+
+        #content p:nth-child(2)::selection {
+            /* 드래그한 곳을 지정 */
+            background-color: pink;
+        }
+
+        #footer {
+            border-top: 1px solid gray;
+            overflow: hidden;
+        }
+
+        #footer ul li {
+            float: left;
+            list-style: none;
+        }
+
+        #footer ul li:first-child {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>제목 및 회사명</h1>
+        </div>
+        <div id="content">
+            <p>What is Lorem Ipsum?</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.</p>
+            <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+                versions of Lorem Ipsum.</p>
+        </div>
+        <div id="footer">
+            <ul>
+                <li>
+                    <img src="0112/logo.png" alt="회사로고" />
+                    <img src="0112/add.png" alt="회사정보" />
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

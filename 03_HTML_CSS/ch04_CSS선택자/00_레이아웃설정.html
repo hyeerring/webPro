@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div#header,
+        #contect,
+        #footer {
+            width: 1000px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        #header .left {
+            float: left;
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            background-color: lightgray;
+            border-radius: 30px 0 30px 0;
+        }
+
+        #header .center {
+            float: left;
+            width: 694px;
+            height: 150px;
+            border: 1px solid black;
+            background-color: lightgray;
+            border-radius: 0 0 30px 30px;
+        }
+
+        #header .right {
+            float: left;
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            background-color: lightgray;
+            border-radius: 0 30px 0 30px;
+        }
+
+        #contect .left {
+            float: left;
+            width: 150px;
+            height: 300px;
+            border: 1px solid black;
+            background-color: lightgray;
+            border-radius: 0 30px 30px 0;
+        }
+
+        #contect .center {
+            float: left;
+            width: 694px;
+            height: 300px;
+            border: 1px solid black;
+            background-color: lightgray;
+            border-radius: 30px 30px 30px 30px;
+            text-align: center;
+        }
+
+        #contect .right {
+            float: left;
+            width: 150px;
+            height: 300px;
+            border: 1px solid black;
+            background-color: lightgray;
+            border-radius: 30px 0 0 30px;
+        }
+
+        #footer .left {
+            float: left;
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            background-color: lightgray;
+            border-radius: 0 30px 0 30px;
+        }
+
+        #footer .center {
+            float: left;
+            width: 694px;
+            height: 150px;
+            border: 1px solid black;
+            background-color: lightgray;
+            border-radius: 30px 30px 0 0;
+        }
+
+        #footer .right {
+            float: left;
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            background-color: lightgray;
+            border-radius: 30px 0 30px 0;
+        }
+
+        #contect .center ul {
+            overflow: hidden;
+        }
+
+        #contect .center ul li {
+            float: left;
+            list-style: none;
+            font-size: 25pt;
+            font-weight: bold;
+            padding: 20px 50px;
+        }
+
+        #contect .right ol li#point {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
+        <div id="contect">
+            <div class="left">&nbsp;</div>
+            <div class="center">
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+                <h2>빅데이터 UI 전문가 양성&nbsp;</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. </p>
+            </div>
+            <div class="right">
+                <ol>
+                    <li>태그</li>
+                    <li>전체</li>
+                    <li>속성</li>
+                    <li>후손</li>
+                    <li>동위</li>
+                    <li class="point">반응</li>
+                    <li class="point">상태</li>
+                    <li class="point">구조</li>
+                    <li class="point">문자</li>
+
+                </ol>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
+    </div>
+</body>
+
+</html>

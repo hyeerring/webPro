@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div#wrap {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        #wrap #header {
+            /* 후손선택자 */
+            overflow: hidden;
+        }
+
+        #wrap .logo {
+            /* 후손선택자 */
+            float: left;
+            padding: 10px 80px 10px 100px;
+        }
+
+        #wrap .title {
+            float: left;
+            padding: 15px 150px 10px 30px;
+        }
+
+        /*        div p {  후손선택자(자손선택자를 포함) 
+            font-size: 25px;
+        }*/
+
+        div>p {
+            font-size: 25px;
+            color: red;
+        }
+
+        div#footer {
+            color: gray;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo">
+                <h1>LOGO</h1>
+            </div>
+            <div class="title">
+                <h2>좋은 주식회사</h2>
+            </div>
+        </div>
+        <div id="content">
+            <p>
+
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <ul>
+                <li>
+                    It is a long established fact that a reader will be distracted by the readable content of a page
+                    when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English.
+                </li>
+                <li>
+                    Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
+                    text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
+                    versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour
+                    and the like).
+                </li>
+                <li>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                    classical Latin literature from 45 BC, making it over 2000 years old.
+                </li>
+            </ul>
+        </div>
+        <div id="footer">
+            <p>
+                경기도 고양시 일산동구 중산동
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

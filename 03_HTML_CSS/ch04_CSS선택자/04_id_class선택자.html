@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      div {
+        border: 1px solid gray;
+      }
+
+      /* id 선택자는 #을 붙여야 함 */
+      #header {
+        width: 800px;
+        margin: 0 auto;
+        background: gray;
+        color: white;
+        text-align: center;
+        /* 글씨 가운데정렬(수평) */
+        text-decoration: underline;
+      }
+
+      #wrap {
+        width: 800px;
+        margin: 0 auto;
+        background-color: lightyellow;
+        overflow: hidden;
+        /* 1번 */
+      }
+
+      #wrap #content {
+        float: left;
+        width: 500px;
+        /* #content = 가로(500px) + 테두리(2px) = 502px*/
+        height: 300px;
+        text-align: center;
+      }
+
+      #wrap #side_banner {
+        float: left;
+        width: 296px;
+        /* #side_banner = 가로(296px) + 테두리(2px) = 298px*/
+        height: 300px;
+        text-align: center;
+      }
+
+      #wrap #content ul li.bigmenu {
+        /* font-size: 20px; */
+        font-size: 1.2em;
+        /* 원래 글씨의 1.5배 */
+      }
+
+      #wrap #content ul li.smallmenu {
+        font-weight: bold;
+      }
+
+      #wrap #side_banner img {
+        width: 200px;
+      }
+
+      #footer {
+        clear: both;
+        width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>HEADER</h1>
+    </div>
+    <div id="wrap">
+      <div id="content">
+        <h2>content</h2>
+        <ul>
+          <!-- class는 중복 사용 가능 -->
+          <li class="bigmenu">menu01</li>
+          <li class="smallmenu">menu02</li>
+          <li class="bigmenu">menu03</li>
+          <li class="smallmenu">menu04</li>
+          <li class="bigmenu">menu05</li>
+        </ul>
+      </div>
+      <div id="side_banner">
+        <h2>BANNER</h2>
+        <a href="https://www.moel.go.kr/index.do">
+          <img src="img/logo.png" alt="로고" />
+        </a>
+      </div>
+    </div>
+    <div id="footer">
+      <h2>FOOTER</h2>
+    </div>
+  </body>
+</html>
