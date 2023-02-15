@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        td {
+            text-align:center;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    닉네임 <input type="text" name="nicname" /><br />
+    <!-- 홈태그 밖의 input은 파라미터 전달 불가. form태그 method는 기본 type get -->
+    <form action="http://google.com" method="get">
+        <table>
+            <tr>
+                <th>
+                    아이디
+                </th>
+                <td><input type="text" name="uid" /><br /></td>
+            </tr>
+            <tr>
+                <th>
+                    비밀번호
+                </th>
+                <td><input type="password" name="upw" /><br /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="로그인" /></td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>

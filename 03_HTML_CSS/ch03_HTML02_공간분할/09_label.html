@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        strong {
+            color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="get">
+        <fieldset>
+            <legend>필드 유효성 검사</legend>
+            <ul>
+                <li>
+                    <label for="name">
+                        이 &nbsp; 름<strong>*</strong>
+                        <input type="text" name="name" id="name" required="required" autofocus="autofocus" />
+                    </label>
+                </li>
+                <li>
+                    <label for="id">
+                        아이디<b>*</b>
+                        <input type="text" name="id" id="id" required="required" />
+                    </label>
+                </li>
+                <li>
+                    <label for="pw">
+                        비밀번호<b>*</b>
+                        <input type="password" name="pw" id="pw" required="required" />
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>추가입력사항</legend>
+            <ul>
+                <li>
+                    <label for="tel">
+                        전화번호
+                        <input type="text" name="tel" id="tel" />
+                    </label>
+                </li>
+                <li>
+                    <label for="email">
+                        이메일
+                        <input type="email" name="email" id="email" />
+                    </label>
+                </li>
+                <li>
+                    사용기술
+                    <input type="checkbox" name="tech" value="java" id="java" />
+                    <label for="java">JAVA</label>
+                    <input type="checkbox" name="tech" value="dbms" id="dbms" />
+                    <label for="dbms">DBMS</label>
+                    <input type="checkbox" name="tech" value="html" id="html" />
+                    <label for="html">HTML</label>
+                </li>
+            </ul>
+        </fieldset>
+        <p>
+            <center>
+                <input type="submit" value="등록" />
+
+            </center>
+        </p>
+    </form>
+</body>
+
+</html>

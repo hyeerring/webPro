@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        td {
+            padding: 2px 10px
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <table>
+            <tr>
+                <td>아이디 </td>
+                <td>
+                    <input type="text" name="id" size="16" />
+                    <input type="button" value="중복확인" />
+                </td>
+            <tr>
+                <td>비밀번호 </td>
+                <td>
+                    <input type="password" name="pw" size="26" />
+                </td>
+            </tr>
+            <tr>
+                <td>전화번호 </td>
+                <td>
+                    <input type="tel" name="phone1" size="4" /> -
+                    <input type="tel" name="phone2" size="4" /> -
+                    <input type="tel" name="phone3" size="4" />
+                </td>
+            </tr>
+            <tr>
+                <td>경력</td>
+                <td><input type="number" name="career" max="60" min="0"> 년</td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td><input type="email" name="email" /></td>
+            </tr>
+            <tr>
+                <td>프로필 이미지</td>
+                <td><input type="file" name="filename" /></td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    <!-- 다중선택 불가 -->
+                    <input type="radio" name="gender" value="m" checked="checked" /> 남자
+                    <input type="radio" name="gender" value="f" /> 여자
+                </td>
+            </tr>
+            <tr>
+                <td>사용언어</td>
+                <td>
+                    <!-- 다중선택 가능, 0개 선택 가능 -->
+                    <input type="checkbox" name="lang" value="kor" checked="checked" /> 한국어
+                    <input type="checkbox" name="lang" value="eng" /> 영어
+                    <input type="checkbox" name="lang" value="cha" /> 중국어
+                    <input type="checkbox" name="lang" value="jap" /> 일본어
+                </td>
+            </tr>
+            <tr>
+                <td>국적</td>
+                <td>
+                    <!-- 다중선택 불가 -->
+                    <select name="nation">
+                        <option value="kor">대한민국</option>
+                        <option>미국</option>
+                        <option>중국</option>
+                        <option>일본</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>좋아하는 음식</td>
+                <td>
+                    <select name="food" multiple="multiple" size="4">
+                        <option>아이스크림</option>
+                        <option>마라탕</option>
+                        <option>샤브샤브</option>
+                        <option>김치볶음밥</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>자기소개</td>
+                <td><textarea name="intro" cols="22" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td>생일</td>
+                <td><input type="date" name="birth" /></td>
+            </tr>
+            <tr>
+                <td>SNS</td>
+                <td><input type="url" name="git" /></td>
+            </tr>
+            <tr>
+                <td>좋아하는 색상</td>
+                <td><input type="color" name="color" /></td>
+            </tr>
+            <tr>
+                <td>좋아하는 정도</td>
+                <td><input type="range" name="range" min="0" max="100" step="1" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="입력" />
+                    <input type="reset" value="초기화" />
+                </td>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+    </form>
+    <footer>
+        <p>서울시 서대문구 신촌로 141, 은하빌딩 203호</p>
+        <p>Copyright © XX. All Right reserverd.</p>
+    </footer>
+</body>
+
+</html>

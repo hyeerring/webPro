@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border-top: 1px solid black;
+            padding: 6px;
+        }
+    </style>
+    <!--<script>function chk() {
+            //submit이 일어나지 않는 조건: title에 입력하지 않거나 name에 2글자 미만 입력
+            if (frm.name.value.length < 2) {
+                alert("이름을 두글자 이상 입력하세요.")
+                frm.name.focus();
+            }
+            return false;
+        }</script>-->
+</head>
+
+<body>
+    <form action="" name="frm" onsubmit="return chk()">
+        <table>
+            <caption>
+                <h2>게시판</h2>
+            </caption>
+            <tr>
+                <td>제목</td>
+                <td>
+                    <!-- 유효성 우선순위: 태그유효성검사 > javaScript 유효성검사 -->
+                    <input type="text" name="title" required="required" />
+                </td>
+            </tr>
+            <tr>
+                <td>작성자</td>
+                <td>
+                    <input type="text" name="name" required="required" />
+                </td>
+            </tr>
+            <tr>
+                <td>내용</td>
+                <td>
+                    <textarea name="content" cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>첨부파일</td>
+                <td>
+                    <input type="file" name="filename" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" / style="text-align:center;">
+                    <input type="submit" value="입력" />
+                    <input type="reset" value="취소" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    전송 안되는 정보
+    <input type="text" name="test" />
+    <form action="" method="get">
+        <p>
+            전화번호 <input type="tel" name="tel" placeholder="010-0000-0000" />
+        </p>
+        <p>
+            카드번호 <input type="text" name="nard" placeholder="XXXX XXXX XXXX XXXX" />
+        </p>
+        <p>
+            업무 <select name="job">
+                <option>분석</option>
+                <option>설계</option>
+                <option>구현</option>
+                <option>Test</option>
+                <option>유지보수</option>
+            </select>
+        </p>
+        <p>
+            <!-- 다른 내용 등록 가능 -->
+            업무 <input type="text" name="job2" list="joblist" />
+            <datalist id="joblist">
+                <option>분석</option>
+                <option>설계</option>
+                <option>구현</option>
+                <option>Test</option>
+                <option value="유지보수"></option>
+            </datalist>
+        </p>
+        <p>
+            <!-- 파라미터는 넘어감 -->
+            <input type="hidden" name="hidden" value="hiddenValue" />
+            <input type="submit" value="등록" />
+        </p>
+    </form>
+</body>
+
+</html>

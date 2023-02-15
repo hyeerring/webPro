@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!-- 정규표현식
+         *  간략 문법
+         * 	\d : 숫자와 매치, [0-9]와 동일
+         *  \D : 숫자가 아닌 것)
+         *  \w : 영문자나 숫자, [A-Za-z0-9]와 동일
+         *  \W : 영문자나 숫자가 아닌 것
+         *  . : 문자
+         *  \. : '.'
+         *  * : 0번 이상 반복
+         *  + : 한번 이상 반복
+         *  ? : 0번이나 1번 의미
+         *  {2} : 2회 반복
+         *  {2,4} : 2~4회 반복 -->
+</head>
+
+<body>
+    <form action="" method="get">
+        <fieldset>
+            <legend>필드에 입력형식의 힌트를 주고 패턴도 확인하는 인터페이스</legend>
+            <ul>
+                <li>
+                    연락처 <input type="text" name="tel" placeholder="000-0000-0000 또는 000-000-0000"
+                        pattern="[0-9]{2,3}-[0-9]{3,4}-/d{4}" title="전화번호 형식을 확인하세요." required="required" />
+                </li>
+                <li>
+                    카드번호 <input type="text" name="card" placeholder="0000-0000-0000-0000"
+                        pattern="\d{4}-\d{4}-\d{4}-\d{4}" title="카드번호 형식을 확인하세요." />
+                </li>
+                <li>
+                    이메일 <input type="text" name="email" placeholder="...@google.com" pattern="\w+@\w+(\.\w+){1,2}"
+                        title="이메일의 형식을 확인하세요." />
+                </li>
+            </ul>
+        </fieldset>
+        <p>
+            <center>
+                <input type="submit" value="입력" />
+                <input type="reset" value="취소" />
+            </center>
+        </p>
+    </form>
+</body>
+
+</html>
