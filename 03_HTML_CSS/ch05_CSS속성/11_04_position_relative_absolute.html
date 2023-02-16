@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #contain {
+            width: 700px;
+            margin: 0 auto;
+            border: 1px solid gray;
+        }
+
+        #header {
+            height: 50px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #wrap {
+            height: 200px;
+            position: relative;
+            /* 자식태그가 #wrap을 벗어나지 않도록 하는 용도 */
+        }
+
+        #content1 {
+            width: 350px;
+            height: 180px;
+            background-color: red;
+            position: absolute;
+            top: 10px;
+        }
+
+        #content2 {
+            width: 350px;
+            height: 180px;
+            background-color: yellow;
+            position: absolute;
+            top: 10px;
+            left: 350px;
+            z-index: 99;
+            /* z-index 큰값이 위로 올라감 */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contain">
+        <div id="header">header</div>
+        <div id="wrap">
+            <idv id="content1">content1</idv>
+            <idv id="content2">content2</idv>
+        </div>
+        <div id="footer">footer</div>
+    </div>
+</body>
+
+</html>

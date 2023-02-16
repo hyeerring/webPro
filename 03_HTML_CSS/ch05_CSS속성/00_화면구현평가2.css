@@ -1,0 +1,46 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+#content {
+    width: 800px;
+    height: 300px;
+    border: 1px solid black;
+    overflow: hidden;
+    padding: 20px;
+}
+
+    #content h1 {
+        text-align: center;
+        text-decoration: underline;
+        padding: 40px;
+    }
+
+    p:nth-child(2) {
+    margin: 10px;
+    } 
+
+    #content p:last-child {
+        float: right;
+        line-height: 220px;
+    }
+
+div#footer {
+    width: 800px;
+    height: 150px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+}
+
+    div#footer a {
+        font-size: 26pt;
+        text-decoration: none;
+        color: blue;
+        line-height: 150px;
+    }
+
+        div#footer a:after {
+            content: ' - ' attr(href);
+        }

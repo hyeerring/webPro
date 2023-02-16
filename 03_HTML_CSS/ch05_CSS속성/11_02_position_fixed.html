@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            opacity: 0.6;
+            border: 1px solid black;
+        }
+
+        #div1 {
+            position: absolute;
+            /* 절대좌표 */
+            /* top: 100px;
+            left: 100px;*/
+            background-color: red;
+        }
+
+        #div2 {
+            position: fixed;
+            top: 50px;
+            left: 50px;
+            background-color: green;
+        }
+
+        #idv3 {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            background-color: blue;
+        }
+
+        #idv4 {
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+
+        #idv5 {
+            /* 부모 기준의 좌표 */
+            position: fixed;
+            top: 50px;
+            left: 50px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <div id="idv3">div3</div>
+    <div id="idv4">div4
+        <div id="idv5">div5</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        ul li {
+            list-style: none;
+            width: 200px;
+            height: 100px;
+            background-color: lightgrey;
+            display:inline-block;
+        }
+
+            ul li:nth-child(1) {
+                opacity:1; /* 디폴트 */
+            }
+
+            ul li:nth-child(2) {
+                opacity: 0.75; /* 0 - 1 사이 값 */
+            }
+
+            ul li:nth-child(3) {
+                opacity: 0.5;
+            }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Hello world</li>
+        <li>Hello world</li>
+        <li>Hello world</li>
+    </ul>
+</body>
+</html>

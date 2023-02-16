@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        #wrap p:nth-child(2n) {
+            background-color: lightgray;
+        }
+
+        #wrap p:nth-child(1) {
+            font-size: .08em;
+            /* 원래 사이즈의 0.8배의 크기 */
+        }
+
+        #wrap p:nth-child(2) {
+            /* 원래 사이즈의 % */
+            font-size: 100%;
+            /* 문자, width, height, padding, margin ... 등의 경우 부모기준 % */
+        }
+
+        #wrap p:nth-child(3) {
+            font-size: 24px;
+        }
+
+        #wrap p:nth-child(4) {
+            font-size: 2em;
+        }
+
+        #wrap p:nth-child(5) {
+            font-size: 2.5em;
+        }
+
+        #wrap>p>span {
+            /* inline 타입인 태그의 display 속성을 block형 태그로 전환 */
+            display: block;
+            color: gray;
+            font-size: .05em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <p>
+            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing
+            hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined
+            chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200
+            Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks
+            reasonable.
+            <span>입력 2023.01.13 10:45</span>
+        </p>
+
+        <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+            Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
+            source.
+            <span>입력 2023.01.13 10:45</span>
+        </p>
+
+        <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+            Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
+            source.
+            <span>입력 2023.01.13 10:45</span>
+        </p>
+
+        <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+            Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
+            source.
+            <span>입력 2023.01.13 10:45</span>
+        </p>
+
+        <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+            Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
+            source.
+            <span>입력 2023.01.13 10:45</span>
+        </p>
+    </div>
+</body>
+
+</html>

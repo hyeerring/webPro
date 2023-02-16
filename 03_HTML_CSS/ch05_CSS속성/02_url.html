@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      /* url() 용: 로컬 font 지정할 때, 백그라운드 이미지를 지정할 때 이용 */
+      /* 로컬 font 설정 */
+      /* @font-face {
+        font-family: "nanumHandFont";
+        src: url("나눔손글씨_규리의_일기.ttf");
+      } */
+
+      /* * {
+        font-family: "nanumHandFont";
+      } */
+
+      #wrap {
+        width: 600px;
+        margin: 10px auto;
+        border: 1px solid black;
+        height: 300px;
+      }
+
+      #wrap #content {
+        width: 80%;
+        height: 100%;
+        line-height: 300px;
+        margin: 0 auto;
+        border: 1px solid black;
+        /*background-image: url('0113/image.jpg');
+                background-repeat: no-repeat;
+                background-position: center;*/
+        background: url("0113/image.jpg") center no-repeat;
+        background-size: 120%;
+        /* 가로 사이즈 기준으로 100% */
+        font-size: 52pt;
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="content">January</div>
+    </div>
+  </body>
+</html>
