@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* -- header -- */
+        header {
+            height: 100px;
+            background-color: orange;
+
+        }
+
+        /* #logo_wrap */
+        header #logo_wrap {
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            position: relative;
+        }
+
+        header #logo_wrap .menu {
+            position: absolute;
+            left: 10px;
+            top: 0;
+        }
+
+        header #logo_wrap .myinfo {
+            position: absolute;
+            right: 10px;
+        }
+
+        header #logo_wrap a {
+            color: white;
+            font-weight: bold;
+        }
+
+        /* -- #search -- */
+        header #search {
+            height: 50px;
+            /* 돋보기 이미지를 #search 안에서 position */
+            position: relative;
+        }
+
+        header #search input[type='text'] {
+            width: 100%;
+            height: 50px;
+            border: 2px solid orange;
+            box-sizing: border-box;
+            outline: none;
+            font-size: 1.2em;
+            padding: 5px 55px 5px 20px;
+        }
+
+        header #search input[type='submit'] {
+            width: 50px;
+            height: 50px;
+            border: 0;
+            outline: none;
+            background: url('ex2/search.png');
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        /* -- lnb -- */
+        #lnb ul {
+            overflow: hidden;
+            margin: 7px 0;
+        }
+
+        #lnb ul li {
+            float: left;
+            width: 16.6%;
+            text-align: center;
+            border-right: 2px solid orange;
+            box-sizing: border-box;
+        }
+
+        #lnb ul li:last-child {
+            border: 0;
+        }
+
+        /* -- section1 -- */
+        section #section1 {
+            margin: 7px;
+        }
+
+        section #section1 .row1,
+        section #section1 .row2,
+        section #section1 .row3 {
+            overflow: hidden;
+        }
+
+        section #section1 .row1>div,
+        section #section1 .row2>div,
+        section #section1 .row3>div {
+            float: left;
+            width: 50%;
+            height: 135px;
+            border: 2px solid white;
+            box-sizing: border-box;
+        }
+
+        section #section1 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* -- section2 -- */
+        section #section2 {
+            margin: 7px;
+        }
+
+        section #section2 ul li {
+            border: 1px solid gray;
+            padding: 7px;
+            /* 말줄임태그 */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* -- section3 -- */
+        section #section3 ul li {
+            border: 1px solid gray;
+            margin: 7px;
+            padding: 10px;
+            height: 100px;
+            /* p.img 태그를 position 잡을 예정 */
+            position: relative;
+        }
+
+        section #section3 ul li p.img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        section #section3 ul li p.txt {
+            padding-left: 110px;
+        }
+
+        section #section3 ul li p.txt span:first-child {
+            display: block;
+            /* 말줄임태그 */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: blue;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        /* -- footer -- */
+
+        footer {
+            background-color: orange;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        footer p:last-child {
+            padding-bottom: 10px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="logo_wrap">
+            <img src="ex2/menu.png" class="menu" alt="메뉴아이콘">
+            <a href="ex02.html" class="logo">mobile logo</a>
+            <img src="ex2/myinfo.png" class="myinfo" alt="내 정보 아이콘">
+        </div>
+        <div id="search">
+            <form action="#">
+                <input type="text" name="query_word">
+                <input type="submit" value="">
+            </form>
+        </div>
+    </header>
+    <div id="lnb">
+        <ul>
+            <li><a href="#">lnb1</a></li>
+            <li><a href="#">lnb2</a></li>
+            <li><a href="#">lnb3</a></li>
+            <li><a href="#">lnb4</a></li>
+            <li><a href="#">lnb5</a></li>
+            <li><a href="#">lnb6</a></li>
+        </ul>
+    </div>
+    <section>
+        <div id="section1">
+            <div class="row1">
+                <div><a href="https://n.news.naver.com/article/215/0001077954">
+                        <img src="https://imgnews.pstatic.net/image/215/2023/01/18/A202301180003_1_20230118065301460.jpg?type=w647"
+                            alt="1행1열">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://n.news.naver.com/article/215/0001077957">
+                        <img src="https://imgnews.pstatic.net/image/215/2023/01/18/A202301180006_1_20230118070901523.jpg?type=w647"
+                            alt="1행2열">
+                    </a>
+                </div>
+            </div>
+            <div class="row2">
+                <div>
+                    <a href="https://n.news.naver.com/article/001/0013706884">
+                        <img src="https://imgnews.pstatic.net/image/001/2023/01/18/AKR20230118003500091_01_i_P4_20230118031408926.jpg?type=w647"
+                            alt="2행1열">
+                    </a>
+                </div>
+                <div><a href="https://n.news.naver.com/article/374/0000319056">
+                        <img src="https://imgnews.pstatic.net/image/374/2023/01/18/0000319056_001_20230118074201446.jpg?type=w647"
+                            alt="2행2열">
+                    </a>
+                </div>
+            </div>
+            <div class="row3">
+                <div>
+                    <a href="https://n.news.naver.com/article/215/0001077957">
+                        <img src="https://imgnews.pstatic.net/image/215/2023/01/18/A202301180006_1_20230118070901523.jpg?type=w647"
+                            alt="3행1열">
+                    </a>
+                </div>
+                <div><a href="https://n.news.naver.com/article/215/0001077954">
+                        <img src="https://imgnews.pstatic.net/image/215/2023/01/18/A202301180003_1_20230118065301460.jpg?type=w647"
+                            alt="3행2열">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- section1 -->
+        <div id="section2">
+            <ul>
+                <li>
+                    <a href="https://n.news.naver.com/article/374/0000319056">
+                        애플, 차세대 칩 탑재한 신형 맥북 프로 출시
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.chosun.com/economy/auto/2023/01/18/2YLVC7HUFJFPJKPTQ44XGYZLFM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news">
+                        “애플 감성 흉내는 그만” 예약만 100만대 넘긴 테슬라 이 차
+                    </a>
+                </li>
+                <li>
+                    <a href="https://biz.sbs.co.kr/article/20000098991?division=NAVER">
+                        [글로벌 비즈 브리핑] 골드만삭스 '어닝쇼크'·애플, 차세대 맥북 출시 外
+                    </a>
+                </li>
+                <li>
+                    <a href="https://zdnet.co.kr/view/?no=20230113184729">
+                        애플페이 韓 정착 "사실상 어렵다"...도입 성공해도 반쪽
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="section3">
+            <ul>
+                <li>
+                    <p class="img">
+                        <img src="ex2/100img.png">
+                    </p>
+                    <p class="txt">
+                        <span>첫번째 span은 말줄임을 사용.
+                            block타입으로 전환
+                        </span>
+                        <span>두번째 span은 말줄임을 사용x.
+                            block타입으로 전환x
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <p class="img">
+                        <img src="ex2/100img.png">
+                    </p>
+                    <p class="txt">
+                        <span>첫번째 span은 말줄임을 사용.
+                            block타입으로 전환
+                        </span>
+                        <span>두번째 span은 말줄임을 사용x.
+                            block타입으로 전환x
+                        </span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p><img src="ex2/logo.png"> </p>
+        <p>경기도 고양시 일산동구 중산동 해태쇼핑</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.7, maximum-scale=1.5">
+
+    <title>Document</title>
+    <style>
+        /* -- 페이지 초기화 -- */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* -- header -- */
+        header {
+            background-image: url('ex1/bg_header.png');
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            position: relative;
+        }
+
+        header .left {
+            position: absolute;
+            left: 10px;
+            top: 7px;
+        }
+
+        header .right {
+            position: absolute;
+            right: 10px;
+            top: 7px;
+        }
+
+        /* -- gnb -- */
+        #gnb ul {
+            overflow: hidden;
+            border: 5px solid gray;
+        }
+
+        #gnb ul li {
+            float: left;
+            width: 10%;
+            margin: 1.25%;
+            border: 1px solid gray;
+            box-sizing: border-box;
+        }
+
+        /* -- checkBox가 checked일 경우만 gnb가 보이도록 -- */
+        #toggle {
+            display: none;
+        }
+
+        #gnb {
+            display: none;
+        }
+
+        #toggle:checked~#gnb {
+            display: block;
+        }
+
+        /* -- lnb -- */
+        #lnb ul {
+            overflow: hidden;
+        }
+
+        #lnb ul li {
+            float: left;
+            width: 20%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: gray;
+            border: 1px solid white;
+            box-sizing: border-box;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        #lnb ul li a {
+            color: white;
+        }
+
+        /* -- content -- */
+        #content {
+            padding: 10px;
+        }
+
+        #content .content_header {
+            padding: 10px;
+            border-bottom: 1px solid gray;
+        }
+
+        #content .content_body p:first-child {
+            color: blue;
+            font-weight: bold;
+            padding: 10px 0;
+            /* -- 말줄임 태그(ellipsis) : 한줄로 출력 */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        #content .content_body p:nth-child(2) {
+            /* -- 이미지 내에서 위치 조정 -- */
+            background: url('ex1/bg_image.png') -600px -300px;
+        }
+
+        /* -- footer -- */
+        footer {
+            text-align: center;
+        }
+
+        footer .logo {
+            text-align: center;
+            border-top: 1px solid gray;
+            margin: 10px;
+        }
+
+        footer .logo img {
+            width: 80px;
+        }
+
+        footer .info {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="toggle">
+    <header>
+        <a href="#" class="left">
+            <img src="ex1/category.png">
+        </a>
+        <h1>Moblie</h1>
+        <label for="toggle" class="right">
+            <img src="ex1/menu.png">
+        </label>
+    </header>
+    <!-- header -->
+    <div id="gnb">
+        <ul>
+            <li><a href="#g1">gnb1</a></li>
+            <li><a href="#g2">gnb2</a></li>
+            <li><a href="#g3">gnb3</a></li>
+            <li><a href="#g4">gnb4</a></li>
+            <li><a href="#g5">gnb5</a></li>
+            <li><a href="#g6">gnb6</a></li>
+            <li><a href="#g7">gnb7</a></li>
+            <li><a href="#g8">gnb8</a></li>
+        </ul>
+    </div>
+    <!-- global nav bar -->
+    <div id="lnb">
+        <ul>
+            <li><a href="#l1">lnb1</a></li>
+            <li><a href="#l2">lnb2</a></li>
+            <li><a href="#l3">lnb3</a></li>
+            <li><a href="#l4">lnb4</a></li>
+            <li><a href="#l5">lnb5</a></li>
+        </ul>
+    </div>
+    <!-- local nav bar -->
+    <div id="content">
+        <div class="content_header">
+            <h1>카카오톡</h1>
+        </div>
+        <div class="content_body">
+            <p>
+                카카오에서 2010년부터 서비스 중인 스마트폰의 데이터 통신 기능을 이용하여, 문자 과금 없이 사람들과 메시지를 주고받을 수 있는 모바일 메신저 앱.
+            </p>
+            <p>
+                스마트폰 대중화 이후 기존 인스턴트 메신저 앱의 번거로운 친구 추가 절차 없이, 스마트폰 주소록의 전화번호만으로 손쉽게 메시지를 주고받을 수 있는 WhatsApp이 성공한 후 만들어졌다.
+                카카오톡이 개발되기 전에는 대한민국에서도 WhatsApp을 많이 사용하였다가 대부분 카카오톡으로 옮겨간 상태다. 메시징 무과금 원칙과 더불어 모바일에서 단체 채팅을 최초로 제공한 점이
+                폭발적인 성장의 원동력이었다.
+            </p>
+        </div>
+    </div>
+    <!-- content -->
+    <footer>
+        <div class="logo">
+            <img
+                src="data:image/png;base64,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">
+        </div>
+        <div class="info">
+            (주)Good System
+        </div>
+        <div class="address">
+            서울시 서대문구 신촌로 114(대현동, 은하빌딩)
+        </div>
+    </footer>
+</body>
+
+</html>
