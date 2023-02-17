@@ -1,0 +1,214 @@
+/* ---------- 페이지 초기화 ---------- */
+@font-face {
+    font-family: 'NotoSans';
+    src: url(../font/NotoSansDisplay-VariableFont_wdth\,wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'NotoSans';
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style: none;
+}
+
+/* ---------- #header ---------- */
+header #header_nav {
+    width: 100%;
+    /* 최소한의 가로 사이즈 */
+    min-width: 900px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #6600FF;
+    font-size: 0.9em;
+    overflow: hidden;
+}
+
+header #header_nav a{
+    color: white;
+}
+
+header #header_nav .gnb{
+    width: 660px;
+    margin-left: 60px;
+}
+
+header #header_nav .gnb ul li {
+    float: left;
+    width: 60px;
+    text-align: center;
+}
+
+header #header_nav .survivalFootball{
+    margin-right: 60px;
+}
+
+header #header_nav .survivalFootball p{
+    float: right;
+    font-weight: bold;
+}
+
+header #header_nav .survivalFootball img{
+    width: 18px;
+    margin: 4px 10px;
+}
+
+/* ---------- #header_info ---------- */
+header #header_info{
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header #header_info .logo{
+    float: left;
+    margin: 20px;
+}
+
+header #header_info .search{
+    float: left;
+    margin: 20px;
+}
+
+header #header_info .search input:first-child{
+    width: 400px;
+    height: 36px;
+    border: 3px solid #3399FF;
+    border-radius: 6px;
+    padding: 10px;
+    font: 20pt;
+    margin-top: 4px;
+    outline: none;
+}
+
+header #header_info .search input.btn_search{
+    width: 100px;
+    height: 36px;
+    color:white;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-top: 4px;
+    background-image: url('../img/search_btn.png');
+    border: 0;
+    outline: none;
+}
+
+header #header_info .service{
+    margin-top: 32px;
+}
+
+header #header_info .service ul li{
+    float: right;
+    margin: 0 10px;
+    text-align: center;
+}
+
+header #header_info .service ul li a{
+    color: #6600FF;
+    font-weight: bold;
+}
+/* ---------- #content ---------- */
+#content{
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#content > div{
+    float: left;
+}
+
+/* main_menu */
+#content #main_menu {
+    width: 155px;
+    /* margin-left: 50px; */
+}
+
+#content #main_menu ul li a{
+    font-size: 14pt;
+    line-height: 40px;
+}
+
+/* main */
+#main{
+    width: 600px;
+    float: left;
+    text-align: center;
+}
+
+#main div, #main_banner div{
+    border: 1px solid gray;
+    margin: 3px;
+}
+#main div:first-child{
+    height: 300px;
+}
+
+#main div:nth-child(2){
+    height: 150px;
+}
+
+#main div:nth-child(3){
+    height: 50px;
+    line-height: 50px;
+    background-color: #6600FF;
+}
+
+#main div:nth-child(3) li{
+    float: left;
+    width: 16.6%;
+    text-align: center;
+}
+
+#main div:nth-child(3) li a{
+    color: white;
+}
+
+#main div:nth-child(n+4){
+    height: 100px;
+}
+
+
+/* ---------- #main_banner ---------- */
+#main_banner div{
+    width: 230px;
+    /* float: left; */
+    text-align: center;
+}
+
+#main_banner div:nth-child(1){
+    margin-top: 0;
+    height: 100px;
+}
+#main_banner div:nth-child(2){
+    height: 100px;
+}
+
+#main_banner div:nth-child(3),
+#main_banner div:nth-child(4){
+    height: 150px;
+}
+
+#main_banner div:nth-child(5){
+    height: 200px;
+}
+
+/* ---------- footer ---------- */
+footer{
+    width: 690px;
+    margin: 20px auto;
+}
+footer ul li img{
+    float: left;
+    height: 30px;
+    margin-right: 20px;
+    opacity: 0.6;
+}
