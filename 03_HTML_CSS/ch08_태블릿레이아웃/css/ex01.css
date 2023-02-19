@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  min-width: 900px;
+}
+
+/* -- header -- */
+header {
+  height: 100px;
+  line-height: 100px;
+  padding: 10px 30px;
+  background-color: black;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* -- nav_gnb -- */
+/* ul 2개. 하나는 왼쪽으로 인접. 다른 하나는 오른쪽으로 인접 */
+#nav_gnb {
+  overflow: hidden;
+  background-color: lightgray;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+
+#nav_gnb ul:first {
+  float: left;
+}
+
+#nav_gnb ul:last-child {
+  float: right;
+}
+
+#nav_gnb ul li {
+  float: left;
+}
+
+#nav_gnb ul li a {
+  color: black;
+  font-weight: bold;
+  width: 125px;
+  display: block;
+  border-right: 1px solid black;
+}
+
+#nav_gnb ul:last-child li:first-child {
+  border-left: 1px solid lightgray;
+}
+
+/* -- section -- */
+section {
+  overflow: hidden;
+  background-color: #eeee33;
+}
+
+section img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+/* -- nav_lnb -- */
+/* section의 #nav_lnb: 고정가로 사이즈 100px */
+section #nav_lnb {
+  float: left;
+  width: 100px;
+}
+
+section #nav_lnb ul a {
+  display: block;
+  padding: 10px 20px;
+  border-bottom: 1px dotted black;
+  color: black;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* -- content_wrap -- */
+/* section의 #content_wrap: width를 100%(margin-right를 -100px) */
+section #content_wrap {
+  float: left;
+  width: 100%;
+  margin-right: -100px;
+  background-color: lightgray;
+}
+
+section #content_wrap #content {
+  padding: 20px 120px 20px 20px;
+  text-align: justify;
+}
+
+section #content div {
+  margin-bottom: 20px;
+}
+
+section #content div:first-child img {
+  float: left;
+  margin-right: 20px;
+}
+
+section #content div:nth-child(2) img {
+  float: right;
+  margin-left: 20px;
+}
+
+section #content div:nth-child(4) img {
+  float: left;
+  margin: 10px 10px 0 0;
+  width: 100px;
+  border-radius: 20px;
+}
+
+/* -- footer -- */
+footer {
+  background-color: black;
+  height: 100px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding-top: 40px;
+}

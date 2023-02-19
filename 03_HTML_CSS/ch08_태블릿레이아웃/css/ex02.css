@@ -1,0 +1,100 @@
+/* ----- 페이지 초기화 ----- */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+li{
+    list-style: none;
+}
+
+/* ----- #top_bar ----- */
+#top_bar{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 1.4em;
+    background-color: black;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    overflow: hidden;
+}
+
+#top_bar ul li{
+    float: left;
+    width: 16.65%;
+    border-right: 1px dashed white;
+    box-sizing: border-box;
+}
+
+#top_bar ul li:last-child{
+    border-right: 0;
+}
+
+/* ----- #left_bar ----- */
+#left_bar{
+    width: 150px;
+    background-color: greenyellow;
+    text-align: center;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    bottom: 100px;
+}
+
+#left_bar ul li a{
+    display: block;
+    padding: 14px;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+/* ----- #right_bar ----- */
+#right_bar{
+    width: 150px;
+    background-color: white;
+    text-align: center;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    bottom: 100px;
+}
+
+#right_bar ul li{
+    padding: 10px;
+}
+
+#right_bar ul li img{
+    width: 100px;
+}
+
+#right_bar ul li:nth-child(2) img{
+    width: 80px;
+}
+
+/* ----- #bottom_bar ----- */
+#bottom_bar{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: black;
+    position: fixed;
+    left: 0; bottom: 0; right: 0;
+}
+
+/* ----- #content ----- */
+#content{
+    margin: 110px 160px 110px 160px;
+    text-align: justify;
+}
+
+#content img{
+    float: left;
+    margin-right: 20px;
+}
