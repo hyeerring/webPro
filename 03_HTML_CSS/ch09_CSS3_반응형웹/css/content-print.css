@@ -1,0 +1,7 @@
+/* content-print: (content printer 용도) */
+
+#wrap .content{
+    color: gray;
+    padding: 10px 5px;
+    font-size: 0.8em;
+}

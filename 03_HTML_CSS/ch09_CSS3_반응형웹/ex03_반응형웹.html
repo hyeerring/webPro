@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* -- 페이지초기화 -- */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            display: block;
+        }
+
+        /* -- 공통부분 -- */
+        #wrap {
+            border: 1px solid gray;
+            text-align: justify;
+        }
+
+        #wrap #header {
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        #wrap #nav ul {
+            overflow: hidden;
+        }
+
+        #wrap #nav ul li {
+            float: left;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        /* -- 스마트폰용_화면 -- */
+        @media screen and (max-width: 959px) {
+            #wrap {
+                width: 100%;
+                background-color: deepskyblue;
+                margin: 3px;
+                font-size: 1.2em;
+            }
+
+            #wrap #nav ul li {
+                width: 33.3%;
+            }
+
+            #wrap #nav ul li:nth-child(4),
+            #wrap #nav ul li:nth-child(5) {
+                display: none;
+            }
+        }
+
+        /* -- 탭용_화면 -- */
+        @media screen and (min-width:960px) and (max-width: 1199px) {
+            #wrap {
+                width: 100%;
+                background-color: dodgerblue;
+                margin: 3px;
+                font-size: 1.1em;
+            }
+
+            #wrap #nav ul li {
+                width: 25%;
+            }
+
+            #wrap #nav ul li:nth-child(5) {
+                display: none;
+            }
+        }
+
+        /* -- PC용_화면 -- */
+        @media screen and (min-width:1200px) {
+            #wrap {
+                width: 800px;
+                margin: 3px auto;
+            }
+
+            #wrap #nav ul li {
+                width: 20%;
+            }
+        }
+
+        #footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>반응형웹</h1>
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="#1">menu1</a></li>
+                <li><a href="#2">menu2</a></li>
+                <li><a href="#3">menu3</a></li>
+                <li><a href="#4">menu4</a></li>
+                <li><a href="#5">menu5</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <h2>What is Lorem Ipsum?</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div id="footer">
+            Good system
+        </div>
+
+    </div>
+</body>
+
+</html>
