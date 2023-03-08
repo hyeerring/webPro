@@ -1,0 +1,11 @@
+-- ex02_oracle.jsp
+SELECT * FROM EMP;
+
+-- ex03.jsp
+SELECT * FROM DEPT;
+SELECT * FROM EMP WHERE DEPTNO LIKE '%' || '10';
+
+-- example.jsp (데이터베이스구현)
+SELECT EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, E.DEPTNO DEPTNO, DNAME
+    FROM EMP E, DEPT D
+    WHERE E.DEPTNO = D.DEPTNO AND ENAME LIKE '%' || TRIM(UPPER('  s')) ||'%';
