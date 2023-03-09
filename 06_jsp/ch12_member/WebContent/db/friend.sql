@@ -1,0 +1,35 @@
+-- DROP
+DROP TABLE FRIEND;
+DROP SEQUENCE FRIEND_NO_SEQ;
+
+-- CREATE
+CREATE SEQUENCE FRIEND_NO_SEQ
+    START WITH 1
+    MAXVALUE 9999
+    NOCACHE
+    NOCYCLE;
+    
+CREATE TABLE FRIEND(
+    NO      NUMBER(4) PRIMARY KEY,
+    NAME    VARCHAR2(50) NOT NULL,
+    TEL     VARCHAR2(50)
+    );
+
+
+-- 1. 친구 추가
+-- public int joinFriend(FriendDto dto)
+INSERT INTO FRIEND (NO, NAME, TEL) VALUES 
+    (FRIEND_NO_SEQ.NEXTVAL, '일길동', '010-1111-1111');
+INSERT INTO FRIEND (NO, NAME, TEL) VALUES (FRIEND_NO_SEQ.NEXTVAL, '이길동', '010-2222-2222');
+
+COMMIT;
+
+-- 2. 친구 목록 출력
+-- public FriendDto getFriend()
+SELECT * FROM FRIEND;
+
+-- 3. 친구 검색
+-- public ArrayList<FriendDto> getSchFriend()
+SELECT * FROM FRIEND
+    WHERE NAME LIKE '%'||'길'||'%' AND TEL LIKE '%'||'11'||'%';
+
