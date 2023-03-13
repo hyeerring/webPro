@@ -1,0 +1,53 @@
+-- ch14_FILEUP 예제
+DROP TABLE BOOK;
+DROP SEQUENCE BOOK_SEQ;
+
+-- VARCHAR2(4000)이 최대 / 그 이상은 CLOB
+CREATE TABLE BOOK(
+    bID         NUMBER(7) PRIMARY KEY, 
+    bTITLE      VARCHAR2(100) NOT NULL, -- 책 이름
+    bPRICE      NUMBER(6) NOT NULL, -- 책 가격
+    bIMAGE1     VARCHAR2(100) NOT NULL, -- 대표이미지
+    bIMAGE2     VARCHAR2(100) NOT NULL, -- 추가이미지
+    bCONTENT    VARCHAR2(4000), -- 책 설명
+    bDISCOUNT   NUMBER(3) NOT NULL, -- 할인율
+    bRDATE      DATE DEFAULT SYSDATE NOT NULL -- 등록일
+);
+
+SELECT * FROM BOOK;
+
+CREATE SEQUENCE BOOK_SEQ
+    MAXVALUE 9999999
+    NOCACHE
+    NOCYCLE;
+
+-- 책 등록
+INSERT INTO BOOK (bID, bTITLE, bPRICE, bIMAGE1, bIMAGE2, bCONTENT, bDISCOUNT)
+    VALUES (BOOK_SEQ.NEXTVAL, '이것이 자바다', 25000, 'noImg.png', 'nothing.png', '자바 기초부터 탄탄하게', 10);
+
+INSERT INTO BOOK (bID, bTITLE, bPRICE, bIMAGE1, bIMAGE2, bCONTENT, bDISCOUNT)
+    VALUES (BOOK_SEQ.NEXTVAL, '이것이 HTML이다', 22000, 'noImg.png', 'nothing.png', 'HTML 기초부터 탄탄하게', 0);
+    
+INSERT INTO BOOK (bID, bTITLE, bPRICE, bIMAGE1, bIMAGE2, bCONTENT, bDISCOUNT)
+    VALUES (BOOK_SEQ.NEXTVAL, '기초탄탄 자바', 24000, 'noImg.png', 'nothing.png', '기초부터 탄탄하게', 15);
+    
+INSERT INTO BOOK (bID, bTITLE, bPRICE, bIMAGE1, bIMAGE2, bCONTENT, bDISCOUNT)
+    VALUES (BOOK_SEQ.NEXTVAL, '기초탄탄 JSP', 32000, 'noImg.png', 'nothing.png', 'JSP 기초부터 탄탄하게', 20);
+    
+ROLLBACK;
+COMMIT;
+
+-- LIST 출력
+-- > PAGING 없이
+SELECT * FROM BOOK ORDER BY bRDATE DESC;
+
+-- > PAGING 추가
+SELECT * FROM (SELECT ROWNUM RN, A.* 
+         FROM (SELECT * FROM BOOK ORDER BY bRDATE DESC) A)
+    WHERE RN BETWEEN 1 AND 3;
+-- (+ 등록된 책 갯수)
+SELECT COUNT(*) FROM BOOK;
+-- 상세보기(bID로 책 정보 가져오기)
+SELECT * FROM BOOK WHERE bID = 2;
+
+UPDATE BOOK SET BTITLE = '3층 서기실의 암호' WHERE BID ='2';
